@@ -1,607 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | BS Tech Solutions — Get Free Consultation India</title>
-    <meta name="description"
-        content="Contact BS Tech Solutions for web development, SEO, digital marketing, and WhatsApp automation services across India. Get a free consultation today.">
-    <meta name="keywords"
-        content="contact BS Tech Solutions, hire web developer india, digital marketing consultation india, get website quote india">
+    <meta name="description" content="Contact BS Tech Solutions for web development, SEO, digital marketing, and WhatsApp automation services across India.">
     <link rel="canonical" href="https://bstechsolutions.in/contact.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap&display=swap">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        .contact-info-section {
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-        }
-
-        .wa-cta-card {
-            background: linear-gradient(135deg, rgba(37, 211, 102, 0.1) 0%, rgba(37, 211, 102, 0.05) 100%);
-            border: 1px solid rgba(37, 211, 102, 0.25);
-            border-radius: var(--radius-lg);
-            padding: 28px;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            margin-top: 20px;
-            transition: var(--transition);
-            text-decoration: none;
-        }
-
-        .wa-cta-card:hover {
-            transform: translateY(-2px);
-            border-color: rgba(37, 211, 102, 0.5);
-            box-shadow: 0 8px 32px rgba(37, 211, 102, 0.15);
-        }
-
-        .wa-icon {
-            width: 60px;
-            height: 60px;
-            background: #25D366;
-            border-radius: var(--radius-full);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
-        }
-
-        .wa-icon svg {
-            width: 30px;
-            height: 30px;
-            fill: white;
-        }
-
-        .success-message {
-            display: none;
-            padding: 20px 24px;
-            background: rgba(34, 197, 94, 0.1);
-            border: 1px solid rgba(34, 197, 94, 0.3);
-            border-radius: var(--radius-md);
-            margin-top: 16px;
-            font-size: 15px;
-            color: #22C55E;
-            font-weight: 600;
-        }
-
-        @media (max-width: 768px) {
-            .contact-grid {
-                gap: 40px;
-            }
-        }
+        .wa-cta-card{background:linear-gradient(135deg,rgba(37,211,102,.1) 0%,rgba(37,211,102,.05) 100%);border:1px solid rgba(37,211,102,.25);border-radius:var(--radius-lg);padding:28px;display:flex;align-items:center;gap:20px;margin-top:20px;transition:var(--transition);text-decoration:none}
+        .wa-cta-card:hover{transform:translateY(-2px);border-color:rgba(37,211,102,.5);box-shadow:0 8px 32px rgba(37,211,102,.15)}
+        .wa-icon{width:60px;height:60px;background:#25D366;border-radius:var(--radius-full);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 20px rgba(37,211,102,.3)}
+        .wa-icon svg{width:30px;height:30px;fill:white}
+        .form-group input.err,.form-group select.err,.form-group textarea.err{border-color:#EF4444;box-shadow:0 0 0 3px rgba(239,68,68,.1)}
+        .ferr{display:none;font-size:12px;color:#EF4444;margin-top:5px;font-weight:500}
+        .ferr.show{display:block}
+        #submitBtn:disabled{opacity:.7;cursor:not-allowed;transform:none!important}
+        .success-banner{display:none;padding:22px 28px;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.35);border-radius:var(--radius-lg);margin-top:20px;animation:fbUp .4s ease forwards}
+        .success-banner.show{display:flex;align-items:flex-start;gap:14px}
+        .sb-icon{font-size:28px;flex-shrink:0;margin-top:2px}
+        .sb-title{font-size:16px;font-weight:700;color:#22C55E;margin-bottom:4px}
+        .sb-sub{font-size:13px;color:var(--gray-400);line-height:1.6}
+        .steps-card{margin-top:28px;padding:24px;background:var(--gradient-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg)}
+        .steps-card h4{font-size:15px;font-weight:700;color:var(--white);margin-bottom:16px}
+        .step-row{display:flex;align-items:flex-start;gap:12px;margin-bottom:12px}
+        .step-row:last-child{margin-bottom:0}
+        .snum{width:24px;height:24px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700}
+        .snum.g{background:rgba(251,191,36,.1);border:1px solid var(--border-gold);color:var(--gold-400)}
+        .snum.gr{background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.3);color:#22C55E}
+        .stext{font-size:13px;color:var(--gray-300);line-height:1.5}
+        .qc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+        @media(max-width:768px){.qc-grid{grid-template-columns:1fr}.contact-grid{gap:40px}.mobile-call-btn{bottom:100px!important}}
+        @keyframes fbUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
     </style>
 </head>
-
 <body>
-
-    <div class="scroll-progress" id="scrollProgress"></div>
-
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-scrolled" id="navbar">
-        <div class="navbar-inner">
-            <a href="index.html" class="logo">
-                <div class="logo-icon">BS</div>
-                <div class="logo-text">
-                    <span class="logo-name">BS Tech Solutions</span>
-                    <span class="logo-tagline">Digital Growth Agency</span>
-                </div>
-            </a>
-            <div class="nav-links">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="services.html" class="nav-link">Services</a>
-                <a href="portfolio.html" class="nav-link">Portfolio</a>
-                <a href="contact.html" class="nav-link active">Contact</a>
-            </div>
-            <div class="nav-cta">
-                <a href="tel:+91XXXXXXXXXX" class="btn btn-ghost btn-sm">📞 Call Now</a>
-                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
+<div class="scroll-progress" id="scrollProgress"></div>
+<nav class="navbar navbar-scrolled" id="navbar">
+    <div class="navbar-inner">
+        <a href="index.html" class="logo"><div class="logo-icon">BS</div><div class="logo-text"><span class="logo-name">BS Tech Solutions</span><span class="logo-tagline">Digital Growth Agency</span></div></a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="portfolio.html" class="nav-link">Portfolio</a>
+            <a href="pricing.html" class="nav-link">Pricing</a>
+            <a href="contact.html" class="nav-link active">Contact</a>
         </div>
-    </nav>
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="services.html" class="nav-link">Services</a>
-        <a href="portfolio.html" class="nav-link">Portfolio</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-        <a href="tel:+91XXXXXXXXXX" class="btn btn-gold" style="margin-top:12px;">📞 Call Now</a>
+        <div class="nav-cta">
+            <a href="tel:+91XXXXXXXXXX" class="btn btn-ghost btn-sm">📞 Call Now</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        </div>
     </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" class="nav-link">Home</a><a href="about.html" class="nav-link">About</a>
+    <a href="services.html" class="nav-link">Services</a><a href="portfolio.html" class="nav-link">Portfolio</a>
+    <a href="pricing.html" class="nav-link">Pricing</a><a href="contact.html" class="nav-link">Contact</a>
+    <a href="tel:+91XXXXXXXXXX" class="btn btn-gold" style="margin-top:12px;">📞 Call Now</a>
+</div>
 
-    <!-- PAGE HERO -->
-    <section class="page-hero">
-        <div class="page-hero-grid"></div>
-        <div class="hero-glow"
-            style="width:500px;height:400px;background:radial-gradient(circle,rgba(251,191,36,0.12) 0%,transparent 70%);top:0;left:0;filter:blur(100px);position:absolute;pointer-events:none;">
+<section class="page-hero">
+    <div class="page-hero-grid"></div>
+    <div class="hero-glow" style="width:500px;height:400px;background:radial-gradient(circle,rgba(251,191,36,.12) 0%,transparent 70%);top:0;left:0;filter:blur(100px);position:absolute;pointer-events:none;"></div>
+    <div class="container">
+        <div class="page-hero-content">
+            <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span style="color:var(--gray-300)">Contact</span></div>
+            <span class="section-label">Let's Talk</span>
+            <h1 class="section-title" style="font-size:clamp(36px,5vw,60px);">Start Your <span class="text-gradient-gold">Digital Growth</span><br>Journey <span class="text-gradient-blue">Today</span></h1>
+            <p class="section-subtitle">Book your free 30-minute strategy session. No commitments — just honest advice.</p>
         </div>
-        <div class="container">
-            <div class="page-hero-content">
-                <div class="breadcrumb">
-                    <a href="index.html">Home</a><span>›</span>
-                    <span style="color:var(--gray-300)">Contact</span>
-                </div>
-                <span class="section-label">Let's Talk</span>
-                <h1 class="section-title" style="font-size:clamp(36px,5vw,60px);">
-                    Start Your <span class="text-gradient-gold">Digital Growth</span><br>
-                    Journey <span class="text-gradient-blue">Today</span>
-                </h1>
-                <p class="section-subtitle">Book your free 30-minute strategy session. No commitments, just honest
-                    advice on how to grow your business online.</p>
+    </div>
+</section>
+
+<section class="section bg-dark">
+    <div class="container">
+        <div class="contact-grid">
+            <!-- LEFT FORM -->
+            <div class="animate-on-scroll">
+                <span class="section-label">Send a Message</span>
+                <h2 class="section-title" style="font-size:30px;">Get Your Free Consultation</h2>
+                <p style="color:var(--gray-400);line-height:1.7;margin-bottom:32px;font-size:14px;">Fill the form below — we respond within 2 hours. Faster on WhatsApp.</p>
+                <form id="contactForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="c_name">Full Name <span style="color:var(--gold-400)">*</span></label>
+                            <input type="text" id="c_name" placeholder="Rahul Sharma" autocomplete="name">
+                            <span class="ferr" id="err_name">Please enter your full name.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="c_phone">Phone Number <span style="color:var(--gold-400)">*</span></label>
+                            <input type="tel" id="c_phone" placeholder="+91 98765 43210" autocomplete="tel">
+                            <span class="ferr" id="err_phone">Enter a valid 10-digit Indian number.</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="c_email">Email Address <span style="color:var(--gold-400)">*</span></label>
+                        <input type="email" id="c_email" placeholder="rahul@yourbusiness.com" autocomplete="email">
+                        <span class="ferr" id="err_email">Please enter a valid email address.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="c_business">Business Name</label>
+                        <input type="text" id="c_business" placeholder="Sharma Enterprises" autocomplete="organization">
+                    </div>
+                    <div class="form-group">
+                        <label for="c_service">Service Required</label>
+                        <select id="c_service">
+                            <option value="">Select a Service…</option>
+                            <option>Website Design &amp; Development</option>
+                            <option>Full Stack Web Application</option>
+                            <option>Website Maintenance &amp; Support</option>
+                            <option>WhatsApp &amp; Business Automation</option>
+                            <option>SEO &amp; Google Ranking</option>
+                            <option>Paid Ads (Google / Meta)</option>
+                            <option>Full Digital Marketing Strategy</option>
+                            <option>Multiple Services</option>
+                            <option>Not Sure — Need Consultation</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="c_budget">Approximate Budget (Optional)</label>
+                        <select id="c_budget">
+                            <option value="">Select Budget Range…</option>
+                            <option>Below ₹10,000</option>
+                            <option>₹10,000 – ₹25,000</option>
+                            <option>₹25,000 – ₹50,000</option>
+                            <option>₹50,000 – ₹1,00,000</option>
+                            <option>Above ₹1,00,000</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="c_message">Your Message <span style="color:var(--gold-400)">*</span></label>
+                        <textarea id="c_message" placeholder="Tell us about your business and goals…"></textarea>
+                        <span class="ferr" id="err_message">Please write at least 10 characters.</span>
+                    </div>
+                    <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:8px;">
+                        <input type="checkbox" id="c_privacy" style="width:16px;height:16px;flex-shrink:0;margin-top:3px;accent-color:var(--blue-500);cursor:pointer;">
+                        <label for="c_privacy" style="font-size:13px;color:var(--gray-400);cursor:pointer;line-height:1.5;">I agree to the <a href="privacy.html" style="color:var(--gold-400);">Privacy Policy</a> and consent to being contacted by BS Tech Solutions.</label>
+                    </div>
+                    <span class="ferr" id="err_privacy" style="margin-bottom:16px;">Please accept the Privacy Policy to continue.</span>
+                    <button type="button" onclick="submitContact()" class="btn btn-gold btn-lg" style="width:100%;justify-content:center;margin-top:16px;" id="submitBtn">🚀 Send Message &amp; Book Consultation</button>
+                    <div class="success-banner" id="successBanner">
+                        <div class="sb-icon">✅</div>
+                        <div>
+                            <div class="sb-title">Message Received!</div>
+                            <div class="sb-sub">We'll get back to you within 2 hours. For fastest response, <a href="https://wa.me/91XXXXXXXXXX" target="_blank" style="color:var(--gold-400);">chat on WhatsApp →</a></div>
+                        </div>
+                    </div>
+                </form>
             </div>
-        </div>
-    </section>
-
-    <!-- ─── CONTACT SECTION ─────────────────── -->
-    <section class="section bg-dark">
-        <div class="container">
-            <div class="contact-grid">
-                <!-- LEFT: Contact Form -->
-                <div class="animate-on-scroll">
-                    <span class="section-label">Send a Message</span>
-                    <h2 class="section-title" style="font-size:30px;">Get Your Free Consultation</h2>
-                    <p style="color:var(--gray-400);line-height:1.7;margin-bottom:32px;font-size:14px;">Fill in the form
-                        below and our team will get back to you within 2 hours — faster if you reach us on WhatsApp.</p>
-
-                    <form id="contactForm" onsubmit="handleSubmit(event)" novalidate>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Full Name *</label>
-                                <input type="text" id="name" name="name" placeholder="Rahul Sharma" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone Number *</label>
-                                <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" placeholder="rahul@yourbusiness.com" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="service">Service Required</label>
-                            <select id="service" name="service">
-                                <option value="">Select a Service...</option>
-                                <option value="website-development">Website Design & Development</option>
-                                <option value="fullstack">Full Stack Web Application</option>
-                                <option value="maintenance">Website Maintenance & Support</option>
-                                <option value="whatsapp-automation">WhatsApp & Business Automation</option>
-                                <option value="seo">SEO & Google Ranking</option>
-                                <option value="paid-ads">Paid Ads (Google / Meta)</option>
-                                <option value="digital-marketing">Full Digital Marketing Strategy</option>
-                                <option value="multiple">Multiple Services</option>
-                                <option value="not-sure">Not Sure — Need Consultation</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="budget">Approximate Budget (Optional)</label>
-                            <select id="budget" name="budget">
-                                <option value="">Select Budget Range...</option>
-                                <option value="below-10k">Below ₹10,000</option>
-                                <option value="10k-25k">₹10,000 – ₹25,000</option>
-                                <option value="25k-50k">₹25,000 – ₹50,000</option>
-                                <option value="50k-1lac">₹50,000 – ₹1,00,000</option>
-                                <option value="above-1lac">Above ₹1,00,000</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Your Message *</label>
-                            <textarea id="message" name="message"
-                                placeholder="Tell us about your business, goals, and what you want to achieve with your digital presence..."
-                                required></textarea>
-                        </div>
-
-                        <div style="display:flex;align-items:center;gap:10px;margin-bottom:24px;">
-                            <input type="checkbox" id="privacy" name="privacy"
-                                style="width:16px;height:16px;accent-color:var(--blue-500);">
-                            <label for="privacy" style="font-size:13px;color:var(--gray-400);cursor:pointer;">I agree to
-                                the <a href="#" style="color:var(--gold-400);">Privacy Policy</a> and consent to being
-                                contacted by BS Tech Solutions.</label>
-                        </div>
-
-                        <button type="submit" class="btn btn-gold btn-lg" style="width:100%;justify-content:center;"
-                            id="submitBtn">
-                            🚀 Send My Message & Book Consultation
-                        </button>
-
-                        <div class="success-message" id="successMessage">
-                            ✅ Thank you! Your message has been received. Our team will contact you within 2 hours. For
-                            faster response, reach us on WhatsApp.
-                        </div>
-                    </form>
-                </div>
-
-                <!-- RIGHT: Contact Info -->
-                <div class="contact-info-section animate-on-scroll delay-2">
-                    <span class="section-label">Contact Details</span>
-                    <h2 class="section-title" style="font-size:30px;">Reach Us Directly</h2>
-                    <p style="color:var(--gray-400);line-height:1.7;margin-bottom:28px;font-size:14px;">We're available
-                        Monday–Saturday, 9 AM – 8 PM IST. For urgent queries, WhatsApp is the fastest way to reach us.
-                    </p>
-
-                    <div class="info-card">
-                        <div class="info-icon info-icon-gold">📧</div>
-                        <div>
-                            <div class="info-title">Email Address</div>
-                            <div class="info-value">info@bstechsolutions.in</div>
-                            <div style="font-size:12px;color:var(--gray-500);margin-top:2px;">Response within 2 hours
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="info-card">
-                        <div class="info-icon info-icon-blue">📞</div>
-                        <div>
-                            <div class="info-title">Phone / Call</div>
-                            <div class="info-value">+91 XXXX XXX XXX</div>
-                            <div style="font-size:12px;color:var(--gray-500);margin-top:2px;">Mon–Sat, 9 AM – 8 PM IST
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="info-card">
-                        <div class="info-icon info-icon-green">🇮🇳</div>
-                        <div>
-                            <div class="info-title">Service Area</div>
-                            <div class="info-value">All Over India</div>
-                            <div style="font-size:12px;color:var(--gray-500);margin-top:2px;">Remote-first — serving 28+
-                                cities</div>
-                        </div>
-                    </div>
-
-                    <!-- WhatsApp CTA Card -->
-                    <a class="wa-cta-card"
-                        href="https://wa.me/91XXXXXXXXXX?text=Hi%20BS%20Tech%20Solutions%2C%20I%27d%20like%20a%20free%20consultation%20for%20my%20business."
-                        target="_blank" id="contact-wa-btn">
-                        <div class="wa-icon">
-                            <svg viewBox="0 0 24 24">
-                                <path
-                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                            </svg>
-                        </div>
-                        <div>
-                            <div style="font-size:16px;font-weight:700;color:var(--white);margin-bottom:4px;">Chat on
-                                WhatsApp</div>
-                            <div style="font-size:13px;color:rgba(37,211,102,0.8);">Fastest response — usually within
-                                minutes</div>
-                            <div style="font-size:12px;color:var(--gray-500);margin-top:4px;">+91 XXXX XXX XXX</div>
-                        </div>
-                    </a>
-
-                    <!-- Why contact us callout -->
-                    <div
-                        style="margin-top:28px;padding:24px;background:var(--gradient-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);">
-                        <h4 style="font-size:15px;font-weight:700;color:var(--white);margin-bottom:16px;">What Happens
-                            After You Contact Us?</h4>
-                        <div style="display:flex;flex-direction:column;gap:12px;">
-                            <div style="display:flex;align-items:flex-start;gap:12px;">
-                                <div
-                                    style="width:24px;height:24px;background:rgba(251,191,36,0.1);border:1px solid var(--border-gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--gold-400);flex-shrink:0;">
-                                    1</div>
-                                <div style="font-size:13px;color:var(--gray-300);">We review your requirements and
-                                    prepare for the call — <strong style="color:var(--white);">within 2 hours</strong>
-                                </div>
-                            </div>
-                            <div style="display:flex;align-items:flex-start;gap:12px;">
-                                <div
-                                    style="width:24px;height:24px;background:rgba(251,191,36,0.1);border:1px solid var(--border-gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--gold-400);flex-shrink:0;">
-                                    2</div>
-                                <div style="font-size:13px;color:var(--gray-300);">Free 30-minute strategy call to
-                                    understand your goals — <strong style="color:var(--white);">no obligation</strong>
-                                </div>
-                            </div>
-                            <div style="display:flex;align-items:flex-start;gap:12px;">
-                                <div
-                                    style="width:24px;height:24px;background:rgba(251,191,36,0.1);border:1px solid var(--border-gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--gold-400);flex-shrink:0;">
-                                    3</div>
-                                <div style="font-size:13px;color:var(--gray-300);">Custom proposal with scope, timeline,
-                                    and transparent pricing — <strong style="color:var(--white);">within 24
-                                        hours</strong></div>
-                            </div>
-                            <div style="display:flex;align-items:flex-start;gap:12px;">
-                                <div
-                                    style="width:24px;height:24px;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#22C55E;flex-shrink:0;">
-                                    ✓</div>
-                                <div style="font-size:13px;color:var(--gray-300);">You decide. No pressure, no pushy
-                                    sales tactics — <strong style="color:var(--white);">ever</strong></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ─── SERVICE QUICK LINKS ──────────────── -->
-    <section class="section bg-dark-2" id="quick-services">
-        <div class="container">
-            <div class="section-center mb-12">
-                <span class="section-label">Quick Connect</span>
-                <h2 class="section-title">Know What You Need?</h2>
-                <p class="section-subtitle">Jump directly to a service-specific consultation via WhatsApp.</p>
-            </div>
-            <div class="services-grid" style="grid-template-columns:repeat(3,1fr);">
-                <a href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20need%20a%20Website%20developed%20for%20my%20business."
-                    target="_blank" class="service-card" style="text-decoration:none;" id="wa-website-dev">
-                    <div class="service-icon service-icon-blue">🌐</div>
-                    <h3 class="service-title">Website Development</h3>
-                    <p class="service-desc">Get a custom website built for your business. Click to discuss on WhatsApp →
-                    </p>
-                    <div
-                        style="display:flex;align-items:center;gap:6px;color:#25D366;font-size:13px;font-weight:600;margin-top:auto;">
-                        <span>📲</span> Chat on WhatsApp
-                    </div>
+            <!-- RIGHT INFO -->
+            <div class="animate-on-scroll delay-2" style="display:flex;flex-direction:column;gap:0;">
+                <span class="section-label">Contact Details</span>
+                <h2 class="section-title" style="font-size:30px;">Reach Us Directly</h2>
+                <p style="color:var(--gray-400);line-height:1.7;margin-bottom:28px;font-size:14px;">Available Mon–Sat, 9 AM – 8 PM IST. WhatsApp is fastest.</p>
+                <div class="info-card"><div class="info-icon info-icon-gold">📧</div><div><div class="info-title">Email Address</div><div class="info-value">bhanuthammai26012@gmail.com</div><div style="font-size:12px;color:var(--gray-500);margin-top:2px;">Response within 2 hours</div></div></div>
+                <div class="info-card"><div class="info-icon info-icon-blue">📞</div><div><div class="info-title">Phone / Call</div><div class="info-value">+91 XXXX XXX XXX</div><div style="font-size:12px;color:var(--gray-500);margin-top:2px;">Mon–Sat, 9 AM – 8 PM IST</div></div></div>
+                <div class="info-card"><div class="info-icon info-icon-green">🇮🇳</div><div><div class="info-title">Service Area</div><div class="info-value">All Over India</div><div style="font-size:12px;color:var(--gray-500);margin-top:2px;">Remote-first · 28+ cities</div></div></div>
+                <a class="wa-cta-card" href="https://wa.me/91XXXXXXXXXX?text=Hi%20BS%20Tech%20Solutions%2C%20I%27d%20like%20a%20free%20consultation." target="_blank" rel="noopener">
+                    <div class="wa-icon"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
+                    <div><div style="font-size:16px;font-weight:700;color:var(--white);margin-bottom:4px;">Chat on WhatsApp</div><div style="font-size:13px;color:rgba(37,211,102,.8);">Fastest response — usually within minutes</div><div style="font-size:12px;color:var(--gray-500);margin-top:4px;">+91 XXXX XXX XXX</div></div>
                 </a>
-                <a href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20need%20WhatsApp%20Automation%20for%20my%20business."
-                    target="_blank" class="service-card" style="text-decoration:none;" id="wa-automation">
-                    <div class="service-icon service-icon-gold">💬</div>
-                    <h3 class="service-title">WhatsApp Automation</h3>
-                    <p class="service-desc">Automate your lead response and customer follow-ups. Click to discuss →</p>
-                    <div
-                        style="display:flex;align-items:center;gap:6px;color:#25D366;font-size:13px;font-weight:600;margin-top:auto;">
-                        <span>📲</span> Chat on WhatsApp
-                    </div>
-                </a>
-                <a href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20need%20SEO%20and%20Digital%20Marketing%20for%20my%20business."
-                    target="_blank" class="service-card" style="text-decoration:none;" id="wa-seo">
-                    <div class="service-icon service-icon-blue">🔍</div>
-                    <h3 class="service-title">SEO & Digital Marketing</h3>
-                    <p class="service-desc">Boost your Google rankings and digital presence. Click to discuss →</p>
-                    <div
-                        style="display:flex;align-items:center;gap:6px;color:#25D366;font-size:13px;font-weight:600;margin-top:auto;">
-                        <span>📲</span> Chat on WhatsApp
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ─── INDIA COVERAGE ────────────────────── -->
-    <section class="section bg-dark">
-        <div class="container">
-            <div style="text-align:center;" class="animate-on-scroll">
-                <span class="section-label" style="justify-content:center;">Pan-India Coverage</span>
-                <h2 class="section-title">We Serve Businesses Across All of India</h2>
-                <p class="section-subtitle" style="margin:0 auto 40px;">Our remote-first model means geography is never
-                    a barrier. We've worked with clients from every corner of India.</p>
-                <div
-                    style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px;max-width:800px;margin:0 auto 40px;">
-                    <span
-                        style="padding:8px 18px;background:rgba(37,99,235,0.1);border:1px solid var(--border-blue);border-radius:var(--radius-full);font-size:13px;color:var(--gray-200);">🏙️
-                        Mumbai</span>
-                    <span
-                        style="padding:8px 18px;background:rgba(37,99,235,0.1);border:1px solid var(--border-blue);border-radius:var(--radius-full);font-size:13px;color:var(--gray-200);">🏙️
-                        Delhi NCR</span>
-                    <span
-                        style="padding:8px 18px;background:rgba(37,99,235,0.1);border:1px solid var(--border-blue);border-radius:var(--radius-full);font-size:13px;color:var(--gray-200);">🏙️
-                        Bangalore</span>
-                    <span
-                        style="padding:8px 18px;background:rgba(37,99,235,0.1);border:1px solid var(--border-blue);border-radius:var(--radius-full);font-size:13px;color:var(--gray-200);">🏙️
-                        Hyderabad</span>
-                    <span
-                        style="padding:8px 18px;background:rgba(37,99,235,0.1);border:1px solid var(--border-blue);border-radius:var(--radius-full);font-size:13px;color:var(--gray-200);">🏙️
-                        Chennai</span>
-                    <span
-                        style="padding:8px 18px;background:rgba(37,99,235,0.1);border:1px solid var(--border-blue);border-radius:var(--radius-full);font-size:13px;color:var(--gray-200);">🏙️
-                        Pune</span>
-                    <span
-                        style="padding:8px 18px;background:rgba(37,99,235,0.1);border:1px solid var(--border-blue);border-radius:var(--radius-full);font-size:13px;color:var(--gray-200);">🏙️
-                        Kolkata</span>
-                    <span
-                        style="padding:8px 18px;background:rgba(37,99,235,0.1);border:1px solid var(--border-blue);border-radius:var(--radius-full);font-size:13px;color:var(--gray-200);">🏙️
-                        Ahmedabad</span>
-                    <span
-                        style="padding:8px 18px;background:rgba(37,99,235,0.1);border:1px solid var(--border-blue);border-radius:var(--radius-full);font-size:13px;color:var(--gray-200);">🏙️
-                        Jaipur</span>
-                    <span
-                        style="padding:8px 18px;background:rgba(37,99,235,0.1);border:1px solid var(--border-blue);border-radius:var(--radius-full);font-size:13px;color:var(--gray-200);">🏙️
-                        Surat</span>
-                    <span
-                        style="padding:8px 18px;background:rgba(37,99,235,0.1);border:1px solid var(--border-blue);border-radius:var(--radius-full);font-size:13px;color:var(--gray-200);">🏙️
-                        Lucknow</span>
-                    <span
-                        style="padding:8px 18px;background:rgba(37,99,235,0.1);border:1px solid var(--border-blue);border-radius:var(--radius-full);font-size:13px;color:var(--gray-200);">🏙️
-                        Nagpur</span>
-                    <span
-                        style="padding:8px 18px;background:rgba(37,99,235,0.1);border:1px solid var(--border-blue);border-radius:var(--radius-full);font-size:13px;color:var(--gray-200);">🏙️
-                        Visakhapatnam</span>
-                    <span
-                        style="padding:8px 18px;background:rgba(37,99,235,0.1);border:1px solid var(--border-blue);border-radius:var(--radius-full);font-size:13px;color:var(--gray-200);">🏙️
-                        Coimbatore</span>
-                    <span
-                        style="padding:8px 18px;background:rgba(251,191,36,0.1);border:1px solid var(--border-gold);border-radius:var(--radius-full);font-size:13px;color:var(--gold-400);font-weight:600;">🇮🇳
-                        + Many More Cities</span>
-                </div>
-                <a href="#contactForm" class="btn btn-primary btn-lg"
-                    onclick="document.getElementById('name').focus();">📩 Request a Consultation</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-about">
-                    <a href="index.html" class="logo" style="display:inline-flex;margin-bottom:0;">
-                        <div class="logo-icon">BS</div>
-                        <div class="logo-text">
-                            <span class="logo-name">BS Tech Solutions</span>
-                            <span class="logo-tagline">Digital Growth Agency</span>
-                        </div>
-                    </a>
-                    <p>Building powerful digital experiences for businesses across India. Your end-to-end digital growth
-                        partner.</p>
-                    <div class="footer-socials">
-                        <a class="social-link" href="#" aria-label="LinkedIn">in</a>
-                        <a class="social-link" href="#" aria-label="Instagram">📷</a>
-                        <a class="social-link" href="#" aria-label="Twitter">𝕏</a>
-                        <a class="social-link" href="#" aria-label="WhatsApp">💬</a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h4>Services</h4>
-                    <div class="footer-links">
-                        <a href="services.html" class="footer-link">Website Development</a>
-                        <a href="services.html" class="footer-link">Full Stack Apps</a>
-                        <a href="services.html" class="footer-link">WhatsApp Automation</a>
-                        <a href="services.html" class="footer-link">SEO Services</a>
-                        <a href="services.html" class="footer-link">Paid Ads</a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <div class="footer-links">
-                        <a href="about.html" class="footer-link">About Us</a>
-                        <a href="portfolio.html" class="footer-link">Portfolio</a>
-                        <a href="contact.html" class="footer-link">Contact Us</a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <div class="footer-contact-item">
-                        <div class="footer-contact-icon">📧</div><span>info@bstechsolutions.in</span>
-                    </div>
-                    <div class="footer-contact-item">
-                        <div class="footer-contact-icon">📞</div><span>+91 XXXX XXX XXX</span>
-                    </div>
-                    <div class="footer-contact-item">
-                        <div class="footer-contact-icon">🇮🇳</div><span>All Over India</span>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2025 BS Tech Solutions. All rights reserved. Built with ❤️ in India.</p>
-                <div class="footer-bottom-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
+                <div class="steps-card">
+                    <h4>What Happens After You Contact Us?</h4>
+                    <div class="step-row"><div class="snum g">1</div><div class="stext">We review your requirements — <strong style="color:var(--white);">within 2 hours</strong></div></div>
+                    <div class="step-row"><div class="snum g">2</div><div class="stext">Free 30-min strategy call — <strong style="color:var(--white);">no obligation</strong></div></div>
+                    <div class="step-row"><div class="snum g">3</div><div class="stext">Custom proposal with transparent pricing — <strong style="color:var(--white);">within 24 hrs</strong></div></div>
+                    <div class="step-row"><div class="snum gr">✓</div><div class="stext">You decide. No pressure, ever — <strong style="color:var(--white);">guaranteed</strong></div></div>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+</section>
 
-    <!-- WhatsApp Float -->
-    <a class="whatsapp-float"
-        href="https://wa.me/91XXXXXXXXXX?text=Hi%20BS%20Tech%20Solutions%2C%20I%27d%20like%20a%20free%20consultation."
-        target="_blank" aria-label="Chat on WhatsApp">
-        <div class="wa-pulse"></div>
-        <svg viewBox="0 0 24 24">
-            <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-        </svg>
-    </a>
+<section class="section bg-dark-2">
+    <div class="container">
+        <div class="section-center mb-12">
+            <span class="section-label">Quick Connect</span>
+            <h2 class="section-title">Know What You Need?</h2>
+            <p class="section-subtitle">Jump straight to a service enquiry via WhatsApp.</p>
+        </div>
+        <div class="qc-grid">
+            <a href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20need%20a%20Website%20for%20my%20business." target="_blank" class="service-card" style="text-decoration:none;">
+                <div class="service-icon service-icon-blue">🌐</div><h3 class="service-title">Website Development</h3>
+                <p class="service-desc">Get a custom website built for your business.</p>
+                <div style="display:flex;align-items:center;gap:6px;color:#25D366;font-size:13px;font-weight:600;margin-top:auto;"><span>📲</span> Chat on WhatsApp</div>
+            </a>
+            <a href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20need%20WhatsApp%20Automation." target="_blank" class="service-card" style="text-decoration:none;">
+                <div class="service-icon service-icon-gold">💬</div><h3 class="service-title">WhatsApp Automation</h3>
+                <p class="service-desc">Automate your lead response and follow-ups.</p>
+                <div style="display:flex;align-items:center;gap:6px;color:#25D366;font-size:13px;font-weight:600;margin-top:auto;"><span>📲</span> Chat on WhatsApp</div>
+            </a>
+            <a href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20need%20SEO%20and%20Digital%20Marketing." target="_blank" class="service-card" style="text-decoration:none;">
+                <div class="service-icon service-icon-blue">🔍</div><h3 class="service-title">SEO &amp; Digital Marketing</h3>
+                <p class="service-desc">Boost your Google rankings and digital presence.</p>
+                <div style="display:flex;align-items:center;gap:6px;color:#25D366;font-size:13px;font-weight:600;margin-top:auto;"><span>📲</span> Chat on WhatsApp</div>
+            </a>
+        </div>
+    </div>
+</section>
 
-    <!-- Mobile Call Button -->
-    <a class="mobile-call-btn" href="tel:+91XXXXXXXXXX">📞 Call Now</a>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-about">
+                <a href="index.html" class="logo" style="display:inline-flex;margin-bottom:0;"><div class="logo-icon">BS</div><div class="logo-text"><span class="logo-name">BS Tech Solutions</span><span class="logo-tagline">Digital Growth Agency</span></div></a>
+                <p>Building powerful digital experiences for businesses across India.</p>
+                <div class="footer-socials"><a class="social-link" href="#" aria-label="LinkedIn">in</a><a class="social-link" href="#" aria-label="Instagram">📷</a><a class="social-link" href="#" aria-label="Twitter">𝕏</a><a class="social-link" href="#" aria-label="WhatsApp">💬</a></div>
+            </div>
+            <div class="footer-col"><h4>Services</h4><div class="footer-links"><a href="services.html" class="footer-link">Website Development</a><a href="services.html" class="footer-link">Full Stack Apps</a><a href="services.html" class="footer-link">WhatsApp Automation</a><a href="services.html" class="footer-link">SEO Services</a><a href="services.html" class="footer-link">Paid Ads</a></div></div>
+            <div class="footer-col"><h4>Company</h4><div class="footer-links"><a href="about.html" class="footer-link">About Us</a><a href="portfolio.html" class="footer-link">Portfolio</a><a href="pricing.html" class="footer-link">Pricing</a><a href="faq.html" class="footer-link">FAQ</a><a href="contact.html" class="footer-link">Contact Us</a></div></div>
+            <div class="footer-col"><h4>Contact</h4><div class="footer-contact-item"><div class="footer-contact-icon">📧</div><span>bhanuthammai26012@gmail.com</span></div><div class="footer-contact-item"><div class="footer-contact-icon">📞</div><span>+91 XXXX XXX XXX</span></div><div class="footer-contact-item"><div class="footer-contact-icon">🇮🇳</div><span>All Over India</span></div></div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 BS Tech Solutions. All rights reserved. Built with ❤️ in India.</p>
+            <div class="footer-bottom-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
+        </div>
+    </div>
+</footer>
 
-    <script>
-        const scrollProgress = document.getElementById('scrollProgress');
-        window.addEventListener('scroll', () => {
-            const p = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-            scrollProgress.style.width = p + '%';
+<a class="whatsapp-float" href="https://wa.me/91XXXXXXXXXX?text=Hi%20BS%20Tech%20Solutions%2C%20I%27d%20like%20a%20free%20consultation." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <div class="wa-pulse"></div>
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<a class="mobile-call-btn" href="tel:+91XXXXXXXXXX" style="bottom:100px;">📞 Call Now</a>
+
+<script>
+// ── PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL HERE ──────────
+const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbyeemGKfXTDQgwwrngMSpH6Is6OIMAeRlUfF6cqaviuAnwu8xUAxGPFG4LGlNFWV724/exec';
+// ────────────────────────────────────────────────────────────
+
+window.addEventListener('scroll',()=>{
+    const p=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight))*100;
+    document.getElementById('scrollProgress').style.width=p+'%';
+});
+document.getElementById('hamburger').addEventListener('click',function(){
+    const m=document.getElementById('mobileMenu');m.classList.toggle('open');
+    const s=this.querySelectorAll('span'),o=m.classList.contains('open');
+    s[0].style.transform=o?'translateY(7px) rotate(45deg)':'';
+    s[1].style.opacity=o?'0':'';s[2].style.transform=o?'translateY(-7px) rotate(-45deg)':'';
+});
+
+function ok(id,errId,valid){
+    const f=document.getElementById(id),e=document.getElementById(errId);
+    f.classList.toggle('err',!valid);
+    if(e){e.classList.toggle('show',!valid);}
+    return valid;
+}
+['c_name','c_phone','c_email','c_message'].forEach(id=>{
+    document.getElementById(id).addEventListener('input',function(){
+        this.classList.remove('err');
+        const e=document.getElementById('err_'+id.replace('c_',''));
+        if(e)e.classList.remove('show');
+    });
+});
+
+function validPhone(v){
+    const d=v.replace(/[\s\-\+]/g,'');
+    const l=d.startsWith('91')&&d.length===12?d.slice(2):d;
+    return /^[6-9]\d{9}$/.test(l);
+}
+
+async function submitContact(){
+    const n=document.getElementById('c_name').value.trim();
+    const p=document.getElementById('c_phone').value.trim();
+    const e=document.getElementById('c_email').value.trim();
+    const b=document.getElementById('c_business').value.trim();
+    const s=document.getElementById('c_service').value;
+    const bd=document.getElementById('c_budget').value;
+    const m=document.getElementById('c_message').value.trim();
+    const pr=document.getElementById('c_privacy').checked;
+
+    let valid=true;
+    valid=ok('c_name','err_name',n.length>=2)&&valid;
+    valid=ok('c_phone','err_phone',validPhone(p))&&valid;
+    valid=ok('c_email','err_email',/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e))&&valid;
+    valid=ok('c_message','err_message',m.length>=10)&&valid;
+
+    const pe=document.getElementById('err_privacy');
+    if(!pr){pe.classList.add('show');valid=false;}else{pe.classList.remove('show');}
+
+    if(!valid){
+        (document.querySelector('.err,.ferr.show'))?.scrollIntoView({behavior:'smooth',block:'center'});
+        return;
+    }
+
+    const btn=document.getElementById('submitBtn');
+    btn.disabled=true;btn.textContent='⏳ Sending…';
+
+    try{
+        await fetch(WEBHOOK_URL,{
+            method:'POST',mode:'no-cors',
+            headers:{'Content-Type':'text/plain'},
+            body:JSON.stringify({
+                source:'Contact Form',
+                fullName:n,phone:p,email:e,
+                businessName:b||'Not provided',
+                service:s||'Not specified',
+                budget:bd||'Not specified',
+                message:m
+            })
         });
+        btn.textContent='✅ Sent!';btn.style.opacity='.7';
+        const banner=document.getElementById('successBanner');
+        banner.classList.add('show');
+        banner.scrollIntoView({behavior:'smooth',block:'center'});
+        document.getElementById('contactForm')
+            .querySelectorAll('input:not([type=checkbox]),select,textarea')
+            .forEach(el=>el.value='');
+        document.getElementById('c_privacy').checked=false;
+    }catch(err){
+        btn.disabled=false;btn.textContent='🚀 Send Message & Book Consultation';
+        alert('Network error. Please try WhatsApp or call us directly.');
+        console.error(err);
+    }
+}
 
-        const hamburger = document.getElementById('hamburger');
-        const mobileMenu = document.getElementById('mobileMenu');
-        hamburger.addEventListener('click', () => {
-            mobileMenu.classList.toggle('open');
-            const spans = hamburger.querySelectorAll('span');
-            const open = mobileMenu.classList.contains('open');
-            spans[0].style.transform = open ? 'translateY(7px) rotate(45deg)' : '';
-            spans[1].style.opacity = open ? '0' : '';
-            spans[2].style.transform = open ? 'translateY(-7px) rotate(-45deg)' : '';
-        });
-
-        // ── GOOGLE SHEETS WEBHOOK ──────────────────────────────
-        const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbwt0wMunmVjpqoxQmXW1NQEeQgJqu6wOJkZfJbSEoAtVyDaNnQGafRTxDjMywNYUeSk/exec';
-        // ───────────────────────────────────────────────────────
-
-        async function handleSubmit(e) {
-            e.preventDefault();
-
-            const btn = document.getElementById('submitBtn');
-            const msgEl = document.getElementById('successMessage');
-            const form = document.getElementById('contactForm');
-
-            // ── Collect fields ──────────────────────────────────
-            const name = document.getElementById('name').value.trim();
-            const phone = document.getElementById('phone').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const service = document.getElementById('service').value.trim();
-            const budget = document.getElementById('budget').value.trim();
-            const message = document.getElementById('message').value.trim();
-
-            // ── Validation ──────────────────────────────────────
-            if (!name || !phone || !email || !message) {
-                alert('Please fill in all required fields (Name, Phone, Email, Message).');
-                return;
-            }
-            if (!/^[6-9]\d{9}$/.test(phone.replace(/[\s\-\+]/g, '').slice(-10))) {
-                alert('Please enter a valid 10-digit Indian mobile number.');
-                return;
-            }
-            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-                alert('Please enter a valid email address.');
-                return;
-            }
-
-            // ── Sending state ───────────────────────────────────
-            btn.textContent = '⏳ Sending...';
-            btn.disabled = true;
-            btn.style.opacity = '0.7';
-
-            const payload = {
-                fullName: name,
-                phone: phone,
-                email: email,
-                businessName: '—',   // not in this form; dash placeholder
-                service: service || 'Not specified',
-                budget: budget || 'Not specified',
-                message: message,
-            };
-
-            try {
-                // mode:'no-cors' is required for Google Apps Script webhooks.
-                // The data IS saved to Google Sheets even though the response is opaque.
-                await fetch(WEBHOOK_URL, {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    headers: { 'Content-Type': 'text/plain' },
-                    body: JSON.stringify(payload),
-                });
-
-                // Success
-                msgEl.style.display = 'block';
-                btn.textContent = '✅ Message Sent!';
-                btn.style.opacity = '1';
-                form.reset();
-
-                // Scroll success message into view
-                msgEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-            } catch (err) {
-                // Genuine network error
-                btn.disabled = false;
-                btn.textContent = '🚀 Send My Message & Book Consultation';
-                btn.style.opacity = '1';
-                alert('Network error. Please try again or reach us directly on WhatsApp.');
-                console.error('Submission error:', err);
-            }
-        }
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in-view'); });
-        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
-    </script>
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in-view');})},{threshold:.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.animate-on-scroll').forEach(el=>obs.observe(el));
+</script>
 </body>
-
 </html>

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Disallow admin/script paths
+Disallow: /google-apps-script.js
+
+Sitemap: https://bstechsolutions.in/sitemap.xml

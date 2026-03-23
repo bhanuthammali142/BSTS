@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | BS Tech Solutions — Transparent Web & Marketing Packages India</title>
+    <meta name="description"
+        content="Explore BS Tech Solutions transparent pricing for website development, SEO, digital marketing, and WhatsApp automation. No hidden costs. Serving businesses across India.">
+    <meta name="keywords"
+        content="website development cost india, digital marketing pricing, SEO packages india, whatsapp automation price, web development packages india">
+    <link rel="canonical" href="https://bstechsolutions.in/pricing.html">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* ── PRICING PAGE SPECIFIC ── */
+        .pricing-toggle-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 56px;
+        }
+
+        .toggle-label {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--gray-400);
+            transition: var(--transition);
+        }
+
+        .toggle-label.active {
+            color: var(--white);
+        }
+
+        .toggle-switch {
+            width: 56px;
+            height: 28px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-full);
+            position: relative;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .toggle-switch.on {
+            background: var(--gradient-gold);
+            border-color: transparent;
+        }
+
+        .toggle-knob {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 20px;
+            height: 20px;
+            background: var(--white);
+            border-radius: var(--radius-full);
+            transition: var(--transition);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .toggle-switch.on .toggle-knob {
+            left: 31px;
+        }
+
+        .save-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 10px;
+            background: rgba(34, 197, 94, 0.12);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            border-radius: var(--radius-full);
+            font-size: 12px;
+            font-weight: 700;
+            color: #22C55E;
+        }
+
+        /* Pricing Cards */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: var(--gradient-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-xl);
+            padding: 40px 32px;
+            position: relative;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--gold-400);
+            background: linear-gradient(135deg, rgba(13, 26, 47, 0.98) 0%, rgba(30, 20, 5, 0.98) 100%);
+            box-shadow: 0 0 0 1px rgba(251, 191, 36, 0.2), var(--shadow-gold);
+        }
+
+        .pricing-card.featured:hover {
+            box-shadow: 0 0 0 1px rgba(251, 191, 36, 0.4), 0 24px 80px rgba(251, 191, 36, 0.2);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-gold);
+            color: var(--dark-900);
+            padding: 5px 20px;
+            border-radius: var(--radius-full);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .plan-tier {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gray-500);
+            margin-bottom: 12px;
+        }
+
+        .plan-name {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+
+        .plan-desc {
+            font-size: 14px;
+            color: var(--gray-400);
+            line-height: 1.6;
+            margin-bottom: 28px;
+            min-height: 48px;
+        }
+
+        .plan-price {
+            margin-bottom: 8px;
+        }
+
+        .price-currency {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--gray-300);
+            vertical-align: top;
+            line-height: 1.4;
+        }
+
+        .price-amount {
+            font-size: 52px;
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1;
+        }
+
+        .price-amount.gold {
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .price-period {
+            font-size: 14px;
+            color: var(--gray-500);
+            margin-bottom: 28px;
+        }
+
+        .price-divider {
+            height: 1px;
+            background: var(--border-subtle);
+            margin-bottom: 24px;
+        }
+
+        .plan-features {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            flex: 1;
+            margin-bottom: 32px;
+        }
+
+        .plan-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 14px;
+            color: var(--gray-300);
+            line-height: 1.5;
+        }
+
+        .feat-check {
+            width: 20px;
+            height: 20px;
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .feat-check.yes {
+            background: rgba(37, 99, 235, 0.15);
+            border: 1px solid var(--border-blue);
+            color: var(--blue-400);
+        }
+
+        .feat-check.yes-gold {
+            background: rgba(251, 191, 36, 0.15);
+            border: 1px solid var(--border-gold);
+            color: var(--gold-400);
+        }
+
+        .feat-check.no {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-subtle);
+            color: var(--gray-600);
+        }
+
+        .feat-text {
+            color: var(--gray-300);
+        }
+
+        .feat-text.dim {
+            color: var(--gray-600);
+            text-decoration: line-through;
+        }
+
+        /* Service Pricing Tables */
+        .service-pricing-section {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .service-tab-nav {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stab {
+            padding: 10px 22px;
+            border-radius: var(--radius-full);
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            border: 1px solid var(--border-subtle);
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--gray-400);
+            transition: var(--transition);
+        }
+
+        .stab:hover,
+        .stab.active {
+            background: var(--gradient-blue);
+            border-color: var(--blue-500);
+            color: var(--white);
+            box-shadow: var(--shadow-blue);
+        }
+
+        .service-pricing-panel {
+            display: none;
+            animation: fadeSlideIn 0.35s ease forwards;
+        }
+
+        .service-pricing-panel.active {
+            display: block;
+        }
+
+        @keyframes fadeSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .pricing-table {
+            background: var(--gradient-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+        }
+
+        .pricing-table-header {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 0;
+            background: rgba(37, 99, 235, 0.08);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .pt-head {
+            padding: 18px 24px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--gray-400);
+        }
+
+        .pt-head.gold {
+            color: var(--gold-400);
+            background: rgba(251, 191, 36, 0.06);
+        }
+
+        .pricing-table-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 0;
+            border-bottom: 1px solid var(--border-subtle);
+            transition: var(--transition);
+        }
+
+        .pricing-table-row:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-table-row:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .pt-cell {
+            padding: 16px 24px;
+            font-size: 14px;
+            color: var(--gray-300);
+            display: flex;
+            align-items: center;
+        }
+
+        .pt-cell.name {
+            font-weight: 600;
+            color: var(--white);
+            gap: 12px;
+        }
+
+        .pt-cell.price {
+            font-weight: 700;
+            color: var(--gold-400);
+            font-size: 15px;
+        }
+
+        .pt-cell.highlight {
+            background: rgba(251, 191, 36, 0.04);
+        }
+
+        /* FAQ Accordion */
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            margin-bottom: 12px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-item:hover {
+            border-color: var(--border-blue);
+        }
+
+        .faq-item.open {
+            border-color: var(--border-gold);
+        }
+
+        .faq-q {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 22px 28px;
+            cursor: pointer;
+            gap: 16px;
+            background: var(--gradient-card);
+        }
+
+        .faq-q-text {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--white);
+            line-height: 1.4;
+        }
+
+        .faq-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: var(--radius-full);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-subtle);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: var(--gold-400);
+            flex-shrink: 0;
+            transition: var(--transition);
+        }
+
+        .faq-item.open .faq-icon {
+            transform: rotate(45deg);
+            background: rgba(251, 191, 36, 0.1);
+            border-color: var(--border-gold);
+        }
+
+        .faq-a {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .faq-a.open {
+            max-height: 400px;
+        }
+
+        .faq-a-inner {
+            padding: 0 28px 24px;
+            font-size: 15px;
+            color: var(--gray-400);
+            line-height: 1.8;
+        }
+
+        .faq-a-inner a {
+            color: var(--gold-400);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        /* Compare table */
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .compare-table th,
+        .compare-table td {
+            padding: 16px 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-subtle);
+            font-size: 14px;
+        }
+
+        .compare-table th {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--gray-400);
+            background: rgba(37, 99, 235, 0.06);
+        }
+
+        .compare-table th:first-child,
+        .compare-table td:first-child {
+            text-align: left;
+            font-weight: 600;
+            color: var(--white);
+            width: 40%;
+        }
+
+        .compare-table th.featured-col {
+            color: var(--gold-400);
+            background: rgba(251, 191, 36, 0.08);
+        }
+
+        .compare-table td.featured-col {
+            background: rgba(251, 191, 36, 0.03);
+        }
+
+        .compare-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .c-yes {
+            color: #22C55E;
+            font-size: 16px;
+        }
+
+        .c-no {
+            color: var(--gray-600);
+            font-size: 16px;
+        }
+
+        .c-partial {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--gold-400);
+            background: rgba(251, 191, 36, 0.1);
+            padding: 3px 8px;
+            border-radius: var(--radius-full);
+            white-space: nowrap;
+        }
+
+        @media (max-width: 1024px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 480px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .pricing-table-header,
+            .pricing-table-row {
+                grid-template-columns: 1.5fr 1fr 1fr;
+            }
+
+            .pt-head:nth-child(3),
+            .pt-cell:nth-child(3) {
+                display: none;
+            }
+
+            .compare-table {
+                font-size: 12px;
+            }
+
+            .compare-table th,
+            .compare-table td {
+                padding: 12px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-scrolled" id="navbar">
+        <div class="navbar-inner">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">BS</div>
+                <div class="logo-text">
+                    <span class="logo-name">BS Tech Solutions</span>
+                    <span class="logo-tagline">Digital Growth Agency</span>
+                </div>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="pricing.html" class="nav-link active">Pricing</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-cta">
+                <a href="contact.html" class="btn btn-gold btn-sm">Get Free Consultation</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="contact.html" class="btn btn-gold" style="margin-top:12px;">Get Free Consultation</a>
+    </div>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="page-hero-grid"></div>
+        <div class="hero-glow"
+            style="width:500px;height:400px;background:radial-gradient(circle,rgba(251,191,36,0.14) 0%,transparent 70%);top:-50px;right:0;filter:blur(100px);position:absolute;pointer-events:none;">
+        </div>
+        <div class="container">
+            <div class="page-hero-content" style="text-align:center;max-width:700px;margin:0 auto;">
+                <div class="breadcrumb" style="justify-content:center;">
+                    <a href="index.html">Home</a><span>›</span>
+                    <span style="color:var(--gray-300)">Pricing</span>
+                </div>
+                <span class="section-label" style="justify-content:center;">Transparent Pricing</span>
+                <h1 class="section-title" style="font-size:clamp(36px,5vw,60px);">
+                    Clear Pricing, <span class="text-gradient-gold">No Surprises</span>
+                </h1>
+                <p class="section-subtitle" style="margin:0 auto;">Every rupee you invest creates real, trackable
+                    business value. Browse our packages or get a custom quote — always free to consult.</p>
+                <div style="margin-top:28px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+                    <div
+                        style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--gray-300);font-weight:500;">
+                        <span
+                            style="width:20px;height:20px;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;color:#22C55E;">✓</span>
+                        No hidden costs
+                    </div>
+                    <div
+                        style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--gray-300);font-weight:500;">
+                        <span
+                            style="width:20px;height:20px;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;color:#22C55E;">✓</span>
+                        Free strategy call
+                    </div>
+                    <div
+                        style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--gray-300);font-weight:500;">
+                        <span
+                            style="width:20px;height:20px;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;color:#22C55E;">✓</span>
+                        EMI options available
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── WEBSITE DEVELOPMENT PACKAGES ── -->
+    <section class="section bg-dark" id="web-packages">
+        <div class="container">
+            <div class="section-center mb-12">
+                <span class="section-label">Website Packages</span>
+                <h2 class="section-title">Website Development Pricing</h2>
+                <p class="section-subtitle">One-time investment. Fully custom. No templates.</p>
+            </div>
+
+            <div class="pricing-grid animate-on-scroll">
+                <!-- Starter -->
+                <div class="pricing-card">
+                    <div class="plan-tier">Starter</div>
+                    <div class="plan-name">Business Starter</div>
+                    <div class="plan-desc">Perfect for small businesses, shops, and professionals ready to go digital.
+                    </div>
+                    <div class="plan-price">
+                        <span class="price-currency">₹</span>
+                        <span class="price-amount" id="starter-price">9,999</span>
+                    </div>
+                    <div class="price-period">One-time · delivery in 7–10 days</div>
+                    <div class="price-divider"></div>
+                    <div class="plan-features">
+                        <div class="plan-feature">
+                            <span class="feat-check yes">✓</span>
+                            <span class="feat-text">Up to 5 pages</span>
+                        </div>
+                        <div class="plan-feature">
+                            <span class="feat-check yes">✓</span>
+                            <span class="feat-text">Mobile responsive design</span>
+                        </div>
+                        <div class="plan-feature">
+                            <span class="feat-check yes">✓</span>
+                            <span class="feat-text">Contact form + WhatsApp button</span>
+                        </div>
+                        <div class="plan-feature">
+                            <span class="feat-check yes">✓</span>
+                            <span class="feat-text">Google Maps integration</span>
+                        </div>
+                        <div class="plan-feature">
+                            <span class="feat-check yes">✓</span>
+                            <span class="feat-text">Basic on-page SEO setup</span>
+                        </div>
+                        <div class="plan-feature">
+                            <span class="feat-check yes">✓</span>
+                            <span class="feat-text">SSL & hosting setup guidance</span>
+                        </div>
+                        <div class="plan-feature">
+                            <span class="feat-check no">—</span>
+                            <span class="feat-text dim">E-commerce / payment gateway</span>
+                        </div>
+                        <div class="plan-feature">
+                            <span class="feat-check no">—</span>
+                            <span class="feat-text dim">Admin / CMS panel</span>
+                        </div>
+                        <div class="plan-feature">
+                            <span class="feat-check no">—</span>
+                            <span class="feat-text dim">Blog / news module</span>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-outline" style="width:100%;justify-content:center;">Get
+                        Started →</a>
+                </div>
+
+                <!-- Growth (Featured) -->
+                <div class="pricing-card featured">
+                    <div class="popular-badge">⭐ Most Popular</div>
+                    <div class="plan-tier" style="color:var(--gold-500);">Growth</div>
+                    <div class="plan-name">Business Growth</div>
+                    <div class="plan-desc">For growing businesses that need a powerful, feature-rich digital presence
+                        that converts.</div>
+                    <div class="plan-price">
+                        <span class="price-currency">₹</span>
+                        <span class="price-amount gold" id="growth-price">24,999</span>
+                    </div>
+                    <div class="price-period">One-time · delivery in 14–18 days</div>
+                    <div class="price-divider"></div>
+                    <div class="plan-features">
+                        <div class="plan-feature">
+                            <span class="feat-check yes-gold">✓</span>
+                            <span class="feat-text">Up to 10 pages</span>
+                        </div>
+                        <div class="plan-feature">
+                            <span class="feat-check yes-gold">✓</span>
+                            <span class="feat-text">Premium responsive design</span>
+                        </div>
+                        <div class="plan-feature">
+                            <span class="feat-check yes-gold">✓</span>
+                            <span class="feat-text">Contact + inquiry forms + CRM lead capture</span>
+                        </div>
+                        <div class="plan-feature">
+                            <span class="feat-check yes-gold">✓</span>
+                            <span class="feat-text">WhatsApp automation integration</span>
+                        </div>
+                        <div class="plan-feature">
+                            <span class="feat-check yes-gold">✓</span>
+                            <span class="feat-text">Advanced on-page & technical SEO</span>
+                        </div>
+                        <div class="plan-feature">
+                            <span class="feat-check yes-gold">✓</span>
+                            <span class="feat-text">Blog / news module</span>
+                        </div>
+                        <div class="plan-feature">
+                            <span class="feat-check yes-gold">✓</span>
+                            <span class="feat-text">Google Analytics 4 setup</span>
+                        </div>
+                        <div class="plan-feature">
+                            <span class="feat-check yes-gold">✓</span>
+                            <span class="feat-text">Speed & Core Web Vitals optimization</span>
+                        </div>
+                        <div class="plan-feature">
+                            <span class="feat-check no">—</span>
+                            <span class="feat-text dim">E-commerce / payment gateway</span>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-gold" style="width:100%;justify-content:center;">Get This
+                        Plan →</a>
+                </div>
+
+                <!-- Enterprise -->
+                <div class="pricing-card">
+                    <div class="plan-tier">Enterprise</div>
+                    <div class="plan-name">Full Stack Pro</div>
+                    <div class="plan-desc">Custom full-stack web applications, e-commerce stores, and complex portals
+                        for ambitious brands.</div>
+                    <div class="plan-price">
+                        <span class="price-currency">₹</span>
+                        <span class="price-amount" id="enterprise-price">49,999</span>
+                    </div>
+                    <div class="price-period">One-time · delivery in 25–40 days</div>
+                    <div class="price-divider"></div>
+                    <div class="plan-features">
+                        <div class="plan-feature">
+                            <span class="feat-check yes">✓</span>
+                            <span class="feat-text">Unlimited pages</span>
+                        </div>
+                        <div class="plan-feature">
+                            <span class="feat-check yes">✓</span>
+                            <span class="feat-text">Custom full-stack architecture</span>
+                        </div>
+                        <div class="plan-feature">
+                            <span class="feat-check yes">✓</span>
+                            <span class="feat-text">E-commerce + payment gateway</span>
+                        </div>
+                        <div class="plan-feature">
+                            <span class="feat-check yes">✓</span>
+                            <span class="feat-text">Admin dashboard / CMS panel</span>
+                        </div>
+                        <div class="plan-feature">
+                            <span class="feat-check yes">✓</span>
+                            <span class="feat-text">Database design + REST API</span>
+                        </div>
+                        <div class="plan-feature">
+                            <span class="feat-check yes">✓</span>
+                            <span class="feat-text">JWT authentication + user roles</span>
+                        </div>
+                        <div class="plan-feature">
+                            <span class="feat-check yes">✓</span>
+                            <span class="feat-text">WhatsApp automation + CRM integration</span>
+                        </div>
+                        <div class="plan-feature">
+                            <span class="feat-check yes">✓</span>
+                            <span class="feat-text">Full SEO + GA4 + GSC setup</span>
+                        </div>
+                        <div class="plan-feature">
+                            <span class="feat-check yes">✓</span>
+                            <span class="feat-text">Dedicated project manager</span>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Request
+                        Quote →</a>
+                </div>
+            </div>
+
+            <!-- Note -->
+            <div style="text-align:center;margin-top:36px;">
+                <p style="font-size:13px;color:var(--gray-500);">
+                    💡 All prices are starting prices. Final quote based on requirements. EMI options available for
+                    projects above ₹15,000. <a href="contact.html" style="color:var(--gold-400);">Contact us</a> for
+                    custom scope.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── MARKETING & SEO PACKAGES ── -->
+    <section class="section bg-dark-2" id="marketing-packages">
+        <div class="container">
+            <div class="section-center mb-12">
+                <span class="section-label">Ongoing Services</span>
+                <h2 class="section-title">Digital Marketing & SEO Packages</h2>
+                <p class="section-subtitle">Monthly retainer plans designed to drive consistent, measurable growth.
+                </p>
+            </div>
+
+            <div class="service-pricing-section animate-on-scroll">
+                <div class="service-tab-nav">
+                    <button class="stab active" onclick="showPricingTab('seo', this)">🔍 SEO</button>
+                    <button class="stab" onclick="showPricingTab('ads', this)">📢 Paid Ads</button>
+                    <button class="stab" onclick="showPricingTab('whatsapp', this)">💬 WhatsApp Automation</button>
+                    <button class="stab" onclick="showPricingTab('maintenance', this)">🛡️ Maintenance</button>
+                </div>
+
+                <!-- SEO -->
+                <div class="service-pricing-panel active" id="panel-seo">
+                    <div class="pricing-table">
+                        <div class="pricing-table-header">
+                            <div class="pt-head">SEO Package</div>
+                            <div class="pt-head">Monthly Price</div>
+                            <div class="pt-head">Keywords</div>
+                            <div class="pt-head gold">Best For</div>
+                        </div>
+                        <div class="pricing-table-row">
+                            <div class="pt-cell name">
+                                <div
+                                    style="width:36px;height:36px;background:rgba(37,99,235,0.1);border:1px solid var(--border-blue);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">
+                                    🌱</div>
+                                <div>
+                                    <div style="font-size:15px;font-weight:700;color:var(--white);">Local Starter</div>
+                                    <div style="font-size:12px;color:var(--gray-500);">Single city / service</div>
+                                </div>
+                            </div>
+                            <div class="pt-cell price">₹7,999/mo</div>
+                            <div class="pt-cell">10 keywords</div>
+                            <div class="pt-cell highlight">Local shops & clinics</div>
+                        </div>
+                        <div class="pricing-table-row">
+                            <div class="pt-cell name">
+                                <div
+                                    style="width:36px;height:36px;background:rgba(251,191,36,0.1);border:1px solid var(--border-gold);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">
+                                    🚀</div>
+                                <div>
+                                    <div style="font-size:15px;font-weight:700;color:var(--white);">Growth SEO</div>
+                                    <div style="font-size:12px;color:var(--gray-500);">Multi-city + content</div>
+                                </div>
+                            </div>
+                            <div class="pt-cell price">₹14,999/mo</div>
+                            <div class="pt-cell">25 keywords</div>
+                            <div class="pt-cell highlight">SMEs scaling online</div>
+                        </div>
+                        <div class="pricing-table-row">
+                            <div class="pt-cell name">
+                                <div
+                                    style="width:36px;height:36px;background:rgba(37,99,235,0.1);border:1px solid var(--border-blue);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">
+                                    👑</div>
+                                <div>
+                                    <div style="font-size:15px;font-weight:700;color:var(--white);">Authority SEO</div>
+                                    <div style="font-size:12px;color:var(--gray-500);">National + link building</div>
+                                </div>
+                            </div>
+                            <div class="pt-cell price">₹24,999/mo</div>
+                            <div class="pt-cell">50+ keywords</div>
+                            <div class="pt-cell highlight">Enterprises & brands</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paid Ads -->
+                <div class="service-pricing-panel" id="panel-ads">
+                    <div class="pricing-table">
+                        <div class="pricing-table-header">
+                            <div class="pt-head">Ads Package</div>
+                            <div class="pt-head">Management Fee</div>
+                            <div class="pt-head">Ad Budget</div>
+                            <div class="pt-head gold">Platforms</div>
+                        </div>
+                        <div class="pricing-table-row">
+                            <div class="pt-cell name">
+                                <div
+                                    style="width:36px;height:36px;background:rgba(37,99,235,0.1);border:1px solid var(--border-blue);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">
+                                    🎯</div>
+                                <div>
+                                    <div style="font-size:15px;font-weight:700;color:var(--white);">Starter Ads</div>
+                                    <div style="font-size:12px;color:var(--gray-500);">1 platform campaign</div>
+                                </div>
+                            </div>
+                            <div class="pt-cell price">₹5,999/mo</div>
+                            <div class="pt-cell">₹10k–₹20k/mo</div>
+                            <div class="pt-cell highlight">Google or Meta</div>
+                        </div>
+                        <div class="pricing-table-row">
+                            <div class="pt-cell name">
+                                <div
+                                    style="width:36px;height:36px;background:rgba(251,191,36,0.1);border:1px solid var(--border-gold);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">
+                                    🔥</div>
+                                <div>
+                                    <div style="font-size:15px;font-weight:700;color:var(--white);">Growth Ads</div>
+                                    <div style="font-size:12px;color:var(--gray-500);">2 platform campaigns</div>
+                                </div>
+                            </div>
+                            <div class="pt-cell price">₹9,999/mo</div>
+                            <div class="pt-cell">₹20k–₹50k/mo</div>
+                            <div class="pt-cell highlight">Google + Meta</div>
+                        </div>
+                        <div class="pricing-table-row">
+                            <div class="pt-cell name">
+                                <div
+                                    style="width:36px;height:36px;background:rgba(37,99,235,0.1);border:1px solid var(--border-blue);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">
+                                    💎</div>
+                                <div>
+                                    <div style="font-size:15px;font-weight:700;color:var(--white);">Full Funnel Ads</div>
+                                    <div style="font-size:12px;color:var(--gray-500);">Multi-platform + CRO</div>
+                                </div>
+                            </div>
+                            <div class="pt-cell price">₹17,999/mo</div>
+                            <div class="pt-cell">₹50k+/mo</div>
+                            <div class="pt-cell highlight">All major platforms</div>
+                        </div>
+                    </div>
+                    <p
+                        style="font-size:12px;color:var(--gray-500);margin-top:12px;text-align:center;">*Management fee
+                        is separate from your ad spend budget paid directly to Google/Meta.</p>
+                </div>
+
+                <!-- WhatsApp -->
+                <div class="service-pricing-panel" id="panel-whatsapp">
+                    <div class="pricing-table">
+                        <div class="pricing-table-header">
+                            <div class="pt-head">Automation Package</div>
+                            <div class="pt-head">Setup + Monthly</div>
+                            <div class="pt-head">Messages/mo</div>
+                            <div class="pt-head gold">Includes</div>
+                        </div>
+                        <div class="pricing-table-row">
+                            <div class="pt-cell name">
+                                <div
+                                    style="width:36px;height:36px;background:rgba(37,211,102,0.1);border:1px solid rgba(37,211,102,0.2);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">
+                                    💬</div>
+                                <div>
+                                    <div style="font-size:15px;font-weight:700;color:var(--white);">Basic Bot</div>
+                                    <div style="font-size:12px;color:var(--gray-500);">Auto-replies & FAQ</div>
+                                </div>
+                            </div>
+                            <div class="pt-cell price">₹4,999 setup + ₹1,999/mo</div>
+                            <div class="pt-cell">500</div>
+                            <div class="pt-cell highlight">FAQ bot + lead capture</div>
+                        </div>
+                        <div class="pricing-table-row">
+                            <div class="pt-cell name">
+                                <div
+                                    style="width:36px;height:36px;background:rgba(37,211,102,0.1);border:1px solid rgba(37,211,102,0.2);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">
+                                    🤖</div>
+                                <div>
+                                    <div style="font-size:15px;font-weight:700;color:var(--white);">Smart Automation</div>
+                                    <div style="font-size:12px;color:var(--gray-500);">CRM + follow-up flows</div>
+                                </div>
+                            </div>
+                            <div class="pt-cell price">₹9,999 setup + ₹3,999/mo</div>
+                            <div class="pt-cell">2,000</div>
+                            <div class="pt-cell highlight">CRM + drip campaigns</div>
+                        </div>
+                        <div class="pricing-table-row">
+                            <div class="pt-cell name">
+                                <div
+                                    style="width:36px;height:36px;background:rgba(37,211,102,0.1);border:1px solid rgba(37,211,102,0.2);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">
+                                    ⚡</div>
+                                <div>
+                                    <div style="font-size:15px;font-weight:700;color:var(--white);">Enterprise
+                                        Automation</div>
+                                    <div style="font-size:12px;color:var(--gray-500);">Full pipeline + bulk</div>
+                                </div>
+                            </div>
+                            <div class="pt-cell price">₹19,999 setup + ₹7,999/mo</div>
+                            <div class="pt-cell">Unlimited</div>
+                            <div class="pt-cell highlight">Full stack automation</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Maintenance -->
+                <div class="service-pricing-panel" id="panel-maintenance">
+                    <div class="pricing-table">
+                        <div class="pricing-table-header">
+                            <div class="pt-head">Maintenance Plan</div>
+                            <div class="pt-head">Monthly Price</div>
+                            <div class="pt-head">Support Hours</div>
+                            <div class="pt-head gold">Response SLA</div>
+                        </div>
+                        <div class="pricing-table-row">
+                            <div class="pt-cell name">
+                                <div
+                                    style="width:36px;height:36px;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.2);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">
+                                    🌿</div>
+                                <div>
+                                    <div style="font-size:15px;font-weight:700;color:var(--white);">Basic Care</div>
+                                    <div style="font-size:12px;color:var(--gray-500);">Monthly updates</div>
+                                </div>
+                            </div>
+                            <div class="pt-cell price">₹1,999/mo</div>
+                            <div class="pt-cell">2 hrs/mo</div>
+                            <div class="pt-cell highlight">48 hrs</div>
+                        </div>
+                        <div class="pricing-table-row">
+                            <div class="pt-cell name">
+                                <div
+                                    style="width:36px;height:36px;background:rgba(37,99,235,0.1);border:1px solid var(--border-blue);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">
+                                    🛡️</div>
+                                <div>
+                                    <div style="font-size:15px;font-weight:700;color:var(--white);">Pro Shield</div>
+                                    <div style="font-size:12px;color:var(--gray-500);">Weekly + security</div>
+                                </div>
+                            </div>
+                            <div class="pt-cell price">₹3,999/mo</div>
+                            <div class="pt-cell">5 hrs/mo</div>
+                            <div class="pt-cell highlight">12 hrs</div>
+                        </div>
+                        <div class="pricing-table-row">
+                            <div class="pt-cell name">
+                                <div
+                                    style="width:36px;height:36px;background:rgba(251,191,36,0.1);border:1px solid var(--border-gold);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">
+                                    👑</div>
+                                <div>
+                                    <div style="font-size:15px;font-weight:700;color:var(--white);">Enterprise Guard</div>
+                                    <div style="font-size:12px;color:var(--gray-500);">Daily + priority SLA</div>
+                                </div>
+                            </div>
+                            <div class="pt-cell price">₹6,999/mo</div>
+                            <div class="pt-cell">10 hrs/mo</div>
+                            <div class="pt-cell highlight">4 hrs</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── COMPARE PLANS TABLE ── -->
+    <section class="section bg-dark">
+        <div class="container">
+            <div class="section-center mb-12">
+                <span class="section-label">Compare</span>
+                <h2 class="section-title">Website Plans — Side by Side</h2>
+            </div>
+            <div class="animate-on-scroll" style="overflow-x:auto;">
+                <table class="compare-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Starter<br><span style="font-weight:400;font-size:12px;">₹9,999</span></th>
+                            <th class="featured-col">Growth ⭐<br><span
+                                    style="font-weight:400;font-size:12px;">₹24,999</span></th>
+                            <th>Full Stack<br><span style="font-weight:400;font-size:12px;">₹49,999+</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pages</td>
+                            <td>Up to 5</td>
+                            <td class="featured-col">Up to 10</td>
+                            <td>Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile Responsive</td>
+                            <td><span class="c-yes">✓</span></td>
+                            <td class="featured-col"><span class="c-yes">✓</span></td>
+                            <td><span class="c-yes">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>On-page SEO</td>
+                            <td><span class="c-partial">Basic</span></td>
+                            <td class="featured-col"><span class="c-partial">Advanced</span></td>
+                            <td><span class="c-partial">Full</span></td>
+                        </tr>
+                        <tr>
+                            <td>WhatsApp Integration</td>
+                            <td><span class="c-partial">Button only</span></td>
+                            <td class="featured-col"><span class="c-partial">Automation</span></td>
+                            <td><span class="c-yes">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Blog / CMS Module</td>
+                            <td><span class="c-no">✗</span></td>
+                            <td class="featured-col"><span class="c-yes">✓</span></td>
+                            <td><span class="c-yes">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>E-Commerce / Payments</td>
+                            <td><span class="c-no">✗</span></td>
+                            <td class="featured-col"><span class="c-no">✗</span></td>
+                            <td><span class="c-yes">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Admin Dashboard</td>
+                            <td><span class="c-no">✗</span></td>
+                            <td class="featured-col"><span class="c-no">✗</span></td>
+                            <td><span class="c-yes">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Google Analytics 4</td>
+                            <td><span class="c-no">✗</span></td>
+                            <td class="featured-col"><span class="c-yes">✓</span></td>
+                            <td><span class="c-yes">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Delivery Time</td>
+                            <td>7–10 days</td>
+                            <td class="featured-col">14–18 days</td>
+                            <td>25–40 days</td>
+                        </tr>
+                        <tr>
+                            <td>Post-launch Support</td>
+                            <td>7 days</td>
+                            <td class="featured-col">30 days</td>
+                            <td>60 days</td>
+                        </tr>
+                        <tr>
+                            <td>Revisions</td>
+                            <td>2 rounds</td>
+                            <td class="featured-col">4 rounds</td>
+                            <td>Unlimited</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FAQ ── -->
+    <section class="section bg-dark-2" id="pricing-faq">
+        <div class="container">
+            <div class="section-center mb-12">
+                <span class="section-label">Questions</span>
+                <h2 class="section-title">Pricing FAQs</h2>
+            </div>
+            <div class="faq-list animate-on-scroll">
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">
+                        <span class="faq-q-text">Are these prices final or can they change?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">The listed prices are starting prices for standard requirements. After
+                            a free consultation call, we'll send you a detailed quote based on your specific project
+                            scope. We never add costs after the quote is agreed — what we quote is what you pay.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">
+                        <span class="faq-q-text">Do you offer EMI or payment in installments?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">Yes! For projects above ₹15,000, we offer flexible payment structures:
+                            typically 40% advance, 40% at design approval, and 20% on final delivery. For enterprise
+                            projects we can arrange monthly billing through milestones. <a
+                                href="contact.html">Contact us</a> to discuss.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">
+                        <span class="faq-q-text">Is domain & hosting included in the price?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">Domain registration and hosting are typically purchased in the client's
+                            name for full ownership. We guide you through the best options (usually ₹500–₹3,000/year for
+                            domain and ₹3,000–₹8,000/year for hosting depending on traffic). We handle the full setup at
+                            no extra charge.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">
+                        <span class="faq-q-text">What if I need features not listed in a package?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">Every business is unique. If you need features outside a standard
+                            package — like custom booking systems, inventory modules, payment portals, or advanced
+                            integrations — we scope it separately and provide a transparent add-on quote. Nothing gets
+                            built without your approval first.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">
+                        <span class="faq-q-text">How long does a website project take?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">Timelines depend on complexity: Starter sites (5 pages) take 7–10
+                            business days; Growth sites take 14–18 days; Full-stack applications take 25–40 days. These
+                            timelines assume timely content and feedback from your side. We share a detailed project
+                            timeline on kickoff.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">
+                        <span class="faq-q-text">Can I cancel an ongoing monthly service?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">Monthly services (SEO, ads, maintenance, automation) require 30 days'
+                            notice before cancellation. There are no lock-in contracts. We earn your business every
+                            month through results — if we're not delivering, you're free to leave.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CTA ── -->
+    <section class="section bg-dark">
+        <div class="container">
+            <div class="cta-banner animate-on-scroll">
+                <span class="section-label" style="justify-content:center;">Get Started</span>
+                <h2 class="cta-title">Not Sure Which Package Fits?</h2>
+                <p class="cta-sub">Book a free 30-minute strategy call. We'll understand your goals and recommend the
+                    right investment for maximum impact.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-gold btn-lg">📞 Book Free Consultation</a>
+                    <a href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20want%20to%20discuss%20pricing%20for%20my%20project."
+                        target="_blank" class="btn btn-outline btn-lg">💬 Ask on WhatsApp</a>
+                </div>
+                <p style="margin-top:20px;font-size:13px;color:var(--gray-500);">🇮🇳 Serving businesses all over India
+                    · Response within 2 hours</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="logo" style="display:inline-flex;margin-bottom:0;">
+                        <div class="logo-icon">BS</div>
+                        <div class="logo-text">
+                            <span class="logo-name">BS Tech Solutions</span>
+                            <span class="logo-tagline">Digital Growth Agency</span>
+                        </div>
+                    </a>
+                    <p>Building powerful digital experiences for businesses across India. Your end-to-end digital growth
+                        partner.</p>
+                    <div class="footer-socials">
+                        <a class="social-link" href="#" aria-label="LinkedIn">in</a>
+                        <a class="social-link" href="#" aria-label="Instagram">📷</a>
+                        <a class="social-link" href="#" aria-label="Twitter">𝕏</a>
+                        <a class="social-link" href="#" aria-label="WhatsApp">💬</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <div class="footer-links">
+                        <a href="services.html" class="footer-link">Website Development</a>
+                        <a href="services.html" class="footer-link">Full Stack Apps</a>
+                        <a href="services.html" class="footer-link">WhatsApp Automation</a>
+                        <a href="services.html" class="footer-link">SEO Services</a>
+                        <a href="services.html" class="footer-link">Paid Ads</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <div class="footer-links">
+                        <a href="about.html" class="footer-link">About Us</a>
+                        <a href="portfolio.html" class="footer-link">Portfolio</a>
+                        <a href="pricing.html" class="footer-link">Pricing</a>
+                        <a href="contact.html" class="footer-link">Contact Us</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">📧</div><span>bhanuthammai26012@gmail.com</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">📞</div><span>+91 XXXX XXX XXX</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">🇮🇳</div><span>All Over India</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 BS Tech Solutions. All rights reserved. Built with ❤️ in India.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a class="whatsapp-float"
+        href="https://wa.me/91XXXXXXXXXX?text=Hi%20BS%20Tech%20Solutions%2C%20I%20want%20to%20discuss%20pricing."
+        target="_blank" aria-label="Chat on WhatsApp">
+        <div class="wa-pulse"></div>
+        <svg viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+    <a class="mobile-call-btn" href="tel:+91XXXXXXXXXX">📞 Call Now</a>
+
+    <script>
+        // Scroll progress
+        window.addEventListener('scroll', () => {
+            const p = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            document.getElementById('scrollProgress').style.width = p + '%';
+        });
+
+        // Hamburger
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+            const spans = hamburger.querySelectorAll('span');
+            const open = mobileMenu.classList.contains('open');
+            spans[0].style.transform = open ? 'translateY(7px) rotate(45deg)' : '';
+            spans[1].style.opacity = open ? '0' : '';
+            spans[2].style.transform = open ? 'translateY(-7px) rotate(-45deg)' : '';
+        });
+
+        // Service tab switch
+        function showPricingTab(id, btn) {
+            document.querySelectorAll('.service-pricing-panel').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.stab').forEach(b => b.classList.remove('active'));
+            document.getElementById('panel-' + id).classList.add('active');
+            btn.classList.add('active');
+        }
+
+        // FAQ toggle
+        function toggleFaq(el) {
+            const item = el.parentElement;
+            const answer = item.querySelector('.faq-a');
+            const isOpen = item.classList.contains('open');
+            // Close all
+            document.querySelectorAll('.faq-item').forEach(fi => {
+                fi.classList.remove('open');
+                fi.querySelector('.faq-a').classList.remove('open');
+            });
+            if (!isOpen) {
+                item.classList.add('open');
+                answer.classList.add('open');
+            }
+        }
+
+        // Animate on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in-view'); });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

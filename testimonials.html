@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Testimonials | BS Tech Solutions — Real Reviews from Indian Businesses</title>
+    <meta name="description" content="Read real testimonials from BS Tech Solutions clients across India. See how we've helped 40+ businesses grow their digital presence with web development, SEO and marketing.">
+    <link rel="canonical" href="https://bstechsolutions.in/testimonials.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* ── TESTIMONIALS PAGE ── */
+        .rating-bar{display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;padding:40px 0;border-bottom:1px solid var(--border-subtle);margin-bottom:60px}
+        .rating-stat{text-align:center}
+        .rating-stat .big{font-size:48px;font-weight:900;background:var(--gradient-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
+        .rating-stat .lbl{font-size:13px;color:var(--gray-400);margin-top:6px;font-weight:500}
+        .rating-divider{width:1px;height:60px;background:var(--border-subtle)}
+        .stars-row{display:flex;gap:4px;justify-content:center;margin:8px 0}
+        .star{font-size:20px;color:var(--gold-400)}
+
+        /* Featured testimonial */
+        .featured-testimonial{background:var(--gradient-card);border:1px solid var(--border-gold);border-radius:var(--radius-xl);padding:56px;position:relative;overflow:hidden;margin-bottom:60px}
+        .featured-testimonial::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(251,191,36,.08) 0%,transparent 70%);pointer-events:none}
+        .ft-quote{font-size:72px;color:var(--gold-400);line-height:1;margin-bottom:20px;font-family:Georgia,serif;opacity:.5}
+        .ft-text{font-size:20px;color:var(--gray-200);line-height:1.8;font-style:italic;margin-bottom:32px;max-width:820px}
+        .ft-author{display:flex;align-items:center;gap:20px}
+        .ft-avatar{width:70px;height:70px;border-radius:var(--radius-full);background:var(--gradient-gold);display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:900;color:var(--dark-900);flex-shrink:0;box-shadow:0 0 0 6px rgba(251,191,36,.15)}
+        .ft-name{font-size:18px;font-weight:800;color:var(--white)}
+        .ft-role{font-size:13px;color:var(--gold-400);font-weight:600;margin-top:2px}
+        .ft-result{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.3);border-radius:var(--radius-full);font-size:13px;color:#22C55E;font-weight:700;margin-top:12px}
+
+        /* Testimonials masonry grid */
+        .t-grid{columns:3;column-gap:24px}
+        .t-card{background:var(--gradient-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:32px;margin-bottom:24px;break-inside:avoid;transition:var(--transition);display:block}
+        .t-card:hover{border-color:var(--border-gold);transform:translateY(-3px);box-shadow:var(--shadow-gold)}
+        .t-stars{display:flex;gap:3px;margin-bottom:14px}
+        .t-star{font-size:14px;color:var(--gold-400)}
+        .t-text{font-size:15px;color:var(--gray-300);line-height:1.8;font-style:italic;margin-bottom:24px}
+        .t-divider{height:1px;background:var(--border-subtle);margin-bottom:20px}
+        .t-author{display:flex;align-items:center;gap:14px}
+        .t-avatar{width:46px;height:46px;border-radius:var(--radius-full);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--white);flex-shrink:0}
+        .t-name{font-size:15px;font-weight:700;color:var(--white)}
+        .t-role{font-size:12px;color:var(--gray-500);margin-top:2px}
+        .t-tag{display:inline-flex;align-items:center;gap:4px;padding:3px 10px;background:rgba(37,99,235,.1);border:1px solid var(--border-blue);border-radius:var(--radius-full);font-size:10px;font-weight:700;color:var(--blue-400);margin-top:8px}
+        .t-result-chip{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.2);border-radius:var(--radius-full);font-size:12px;color:#22C55E;font-weight:600;margin-top:12px}
+
+        /* Google / platform badges */
+        .platform-row{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-bottom:60px}
+        .platform-badge{display:flex;align-items:center;gap:12px;padding:16px 24px;background:var(--gradient-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);transition:var(--transition)}
+        .platform-badge:hover{border-color:var(--border-gold);transform:translateY(-2px)}
+        .pb-icon{font-size:28px}
+        .pb-name{font-size:13px;font-weight:700;color:var(--white)}
+        .pb-rating{font-size:12px;color:var(--gold-400);font-weight:600}
+
+        @media(max-width:1024px){.t-grid{columns:2}}
+        @media(max-width:768px){
+            .t-grid{columns:1}
+            .featured-testimonial{padding:32px 24px}
+            .ft-text{font-size:17px}
+            .rating-divider{display:none}
+        }
+    </style>
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<nav class="navbar navbar-scrolled" id="navbar">
+    <div class="navbar-inner">
+        <a href="index.html" class="logo"><div class="logo-icon">BS</div><div class="logo-text"><span class="logo-name">BS Tech Solutions</span><span class="logo-tagline">Digital Growth Agency</span></div></a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="portfolio.html" class="nav-link">Portfolio</a>
+            <a href="pricing.html" class="nav-link">Pricing</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-cta">
+            <a href="contact.html" class="btn btn-gold btn-sm">Get Free Consultation</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        </div>
+    </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" class="nav-link">Home</a><a href="about.html" class="nav-link">About</a>
+    <a href="services.html" class="nav-link">Services</a><a href="portfolio.html" class="nav-link">Portfolio</a>
+    <a href="pricing.html" class="nav-link">Pricing</a><a href="contact.html" class="nav-link">Contact</a>
+    <a href="contact.html" class="btn btn-gold" style="margin-top:12px;">Get Free Consultation</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+    <div class="page-hero-grid"></div>
+    <div class="hero-glow" style="width:500px;height:400px;background:radial-gradient(circle,rgba(251,191,36,.14) 0%,transparent 70%);top:-50px;right:10%;filter:blur(100px);position:absolute;pointer-events:none;"></div>
+    <div class="container">
+        <div class="page-hero-content" style="text-align:center;max-width:720px;margin:0 auto;">
+            <div class="breadcrumb" style="justify-content:center;"><a href="index.html">Home</a><span>›</span><span style="color:var(--gray-300)">Testimonials</span></div>
+            <span class="section-label" style="justify-content:center;">Client Stories</span>
+            <h1 class="section-title" style="font-size:clamp(36px,5vw,60px);">Real Results from <span class="text-gradient-gold">Real Businesses</span></h1>
+            <p class="section-subtitle" style="margin:0 auto;">40+ businesses across India have grown their digital presence with BS Tech Solutions. Here's what they say.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section bg-dark">
+    <div class="container">
+
+        <!-- Rating Summary -->
+        <div class="rating-bar animate-on-scroll">
+            <div class="rating-stat">
+                <div class="big">4.9</div>
+                <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+                <div class="lbl">Average Rating</div>
+            </div>
+            <div class="rating-divider"></div>
+            <div class="rating-stat">
+                <div class="big">40+</div>
+                <div class="lbl">Happy Clients</div>
+            </div>
+            <div class="rating-divider"></div>
+            <div class="rating-stat">
+                <div class="big">98%</div>
+                <div class="lbl">Satisfaction Rate</div>
+            </div>
+            <div class="rating-divider"></div>
+            <div class="rating-stat">
+                <div class="big">3+</div>
+                <div class="lbl">Avg. Relationship (Years)</div>
+            </div>
+        </div>
+
+        <!-- Platform Badges -->
+        <div class="platform-row animate-on-scroll">
+            <div class="platform-badge">
+                <div class="pb-icon">🌐</div>
+                <div><div class="pb-name">Google Reviews</div><div class="pb-rating">⭐ 4.9 / 5.0</div></div>
+            </div>
+            <div class="platform-badge">
+                <div class="pb-icon">💼</div>
+                <div><div class="pb-name">LinkedIn</div><div class="pb-rating">⭐ 5.0 / 5.0</div></div>
+            </div>
+            <div class="platform-badge">
+                <div class="pb-icon">📷</div>
+                <div><div class="pb-name">Instagram</div><div class="pb-rating">⭐ 5.0 / 5.0</div></div>
+            </div>
+        </div>
+
+        <!-- Featured Testimonial -->
+        <div class="featured-testimonial animate-on-scroll">
+            <div class="ft-quote">"</div>
+            <p class="ft-text">BS Tech Solutions completely transformed how our restaurant operates online. Before them, we had zero digital presence — no website, no Google listing, nothing. Within 60 days of launching our new website and running their local SEO strategy, we saw a 40% jump in table reservations and our phone was ringing every day with new customers. The team was incredibly professional, kept us updated at every stage, and delivered ahead of schedule. If you're a restaurant owner in India not working with them — you're leaving serious money on the table.</p>
+            <div class="ft-author">
+                <div class="ft-avatar">R</div>
+                <div>
+                    <div class="ft-name">Rajesh Kumar</div>
+                    <div class="ft-role">Owner, Aishwarya Ruchulu Restaurant — Hyderabad</div>
+                    <div class="ft-result">📈 +40% reservations in 60 days</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Masonry Testimonials Grid -->
+        <div class="t-grid">
+
+            <div class="t-card animate-on-scroll">
+                <div class="t-stars"><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span></div>
+                <p class="t-text">"The WhatsApp automation system they built for us is a game-changer. We went from manually following up every inquiry to having the entire process automated. 200+ messages per day are now handled automatically and our conversion rate has tripled."</p>
+                <div class="t-result-chip">📊 3x conversion rate</div>
+                <div class="t-divider"></div>
+                <div class="t-author">
+                    <div class="t-avatar" style="background:var(--gradient-gold);color:var(--dark-900);">S</div>
+                    <div><div class="t-name">Suresh Verma</div><div class="t-role">Managing Director, SV Caterers · Hyderabad</div><span class="t-tag">💬 WhatsApp Automation</span></div>
+                </div>
+            </div>
+
+            <div class="t-card animate-on-scroll delay-1">
+                <div class="t-stars"><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span></div>
+                <p class="t-text">"Our Google ranking went from page 5 to position 1 within 4 months. The SEO strategy was thorough, transparent and delivered results far beyond what I expected. Monthly reports are clear and I always know exactly where we stand."</p>
+                <div class="t-result-chip">🔍 Page 5 → Position 1 in 4 months</div>
+                <div class="t-divider"></div>
+                <div class="t-author">
+                    <div class="t-avatar" style="background:linear-gradient(135deg,#7C3AED,#4F46E5);">P</div>
+                    <div><div class="t-name">Priya Sharma</div><div class="t-role">Founder, TechBiz Solutions · Bangalore</div><span class="t-tag">🔍 SEO</span></div>
+                </div>
+            </div>
+
+            <div class="t-card animate-on-scroll delay-2">
+                <div class="t-stars"><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span></div>
+                <p class="t-text">"I was skeptical about hiring a digital agency — I'd been burned before by agencies who promised everything and delivered nothing. BS Tech is completely different. They're honest, they set realistic expectations, and they actually deliver. Our new website gets genuine compliments from every visitor."</p>
+                <div class="t-divider"></div>
+                <div class="t-author">
+                    <div class="t-avatar" style="background:linear-gradient(135deg,#059669,#10B981);">A</div>
+                    <div><div class="t-name">Anil Mehta</div><div class="t-role">Director, AM Real Estate · Mumbai</div><span class="t-tag">🌐 Website Dev</span></div>
+                </div>
+            </div>
+
+            <div class="t-card animate-on-scroll">
+                <div class="t-stars"><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span></div>
+                <p class="t-text">"We needed a full e-commerce store built from scratch in 3 weeks for our product launch. Most agencies said it couldn't be done in that time. BS Tech not only delivered in time — they delivered something that looked better than anything I could have imagined at that price point."</p>
+                <div class="t-result-chip">⚡ Delivered in 18 days</div>
+                <div class="t-divider"></div>
+                <div class="t-author">
+                    <div class="t-avatar" style="background:linear-gradient(135deg,#DC2626,#EF4444);">K</div>
+                    <div><div class="t-name">Kavya Reddy</div><div class="t-role">Founder, KR Organics · Chennai</div><span class="t-tag">⚙️ Full Stack</span></div>
+                </div>
+            </div>
+
+            <div class="t-card animate-on-scroll delay-1">
+                <div class="t-stars"><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span></div>
+                <p class="t-text">"Our Google Ads were burning money before BS Tech took over. Same budget, but now we're getting 4x the qualified leads. They restructured our entire campaign, fixed our landing pages, and the ROI improvement was visible from the very first month."</p>
+                <div class="t-result-chip">📢 4x leads, same budget</div>
+                <div class="t-divider"></div>
+                <div class="t-author">
+                    <div class="t-avatar" style="background:linear-gradient(135deg,#D97706,#F59E0B);">M</div>
+                    <div><div class="t-name">Mohammed Irfan</div><div class="t-role">CEO, BuildRight Construction · Pune</div><span class="t-tag">📢 Paid Ads</span></div>
+                </div>
+            </div>
+
+            <div class="t-card animate-on-scroll delay-2">
+                <div class="t-stars"><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span></div>
+                <p class="t-text">"I run a small clinic in Jaipur — not exactly a tech-savvy city — and I was worried a digital agency wouldn't understand my local market. BS Tech understood exactly what I needed: a simple, trustworthy website and Google Maps ranking for local patients. Both delivered perfectly."</p>
+                <div class="t-divider"></div>
+                <div class="t-author">
+                    <div class="t-avatar" style="background:linear-gradient(135deg,#0891B2,#06B6D4);">D</div>
+                    <div><div class="t-name">Dr. Deepa Joshi</div><div class="t-role">Clinic Owner · Jaipur</div><span class="t-tag">🌐 Website + Local SEO</span></div>
+                </div>
+            </div>
+
+            <div class="t-card animate-on-scroll">
+                <div class="t-stars"><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span></div>
+                <p class="t-text">"What impressed me most was the communication. Every week I got an update. If there was a delay for any reason, they told me before I had to ask. That level of professionalism is rare in this industry. Highly recommended for any serious business owner."</p>
+                <div class="t-divider"></div>
+                <div class="t-author">
+                    <div class="t-avatar" style="background:var(--gradient-blue);">V</div>
+                    <div><div class="t-name">Vikram Singh</div><div class="t-role">MD, VS Logistics · Delhi NCR</div><span class="t-tag">⚙️ Business Portal</span></div>
+                </div>
+            </div>
+
+            <div class="t-card animate-on-scroll delay-1">
+                <div class="t-stars"><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span></div>
+                <p class="t-text">"We've been with BS Tech for 2 years now on their maintenance plan. The peace of mind alone is worth it — I don't have to worry about the site going down, getting hacked, or being outdated. They proactively update everything before it becomes a problem."</p>
+                <div class="t-result-chip">🛡️ 2 years, zero downtime</div>
+                <div class="t-divider"></div>
+                <div class="t-author">
+                    <div class="t-avatar" style="background:linear-gradient(135deg,#9333EA,#7C3AED);">N</div>
+                    <div><div class="t-name">Neha Gupta</div><div class="t-role">Owner, Neha's Boutique · Kolkata</div><span class="t-tag">🛡️ Maintenance</span></div>
+                </div>
+            </div>
+
+            <div class="t-card animate-on-scroll delay-2">
+                <div class="t-stars"><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span></div>
+                <p class="t-text">"I'm based in a tier-2 city and was worried about finding a reliable digital partner. BS Tech's remote-first model works seamlessly — video calls, WhatsApp, everything is handled smoothly. Distance was never an issue. My website looks like it was built for a Fortune 500 company."</p>
+                <div class="t-divider"></div>
+                <div class="t-author">
+                    <div class="t-avatar" style="background:linear-gradient(135deg,#0369A1,#0284C7);">R</div>
+                    <div><div class="t-name">Rohit Patil</div><div class="t-role">Founder, RP Academy · Nagpur</div><span class="t-tag">🌐 Website Dev</span></div>
+                </div>
+            </div>
+
+        </div><!-- /t-grid -->
+    </div>
+</section>
+
+<!-- VIDEO / WRITTEN PROOF STRIP -->
+<section class="section bg-dark-2">
+    <div class="container">
+        <div class="section-center mb-12 animate-on-scroll">
+            <span class="section-label">By the Numbers</span>
+            <h2 class="section-title">Results That Speak for Themselves</h2>
+        </div>
+        <div class="features-grid animate-on-scroll">
+            <div class="feature-card">
+                <div class="feature-icon-wrap">📈</div>
+                <h3 class="feature-title">180% Average ROI</h3>
+                <p class="feature-desc">Clients who invest in our full digital stack — website + SEO + ads — see an average 180% return on their digital investment within 12 months.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon-wrap">⏱️</div>
+                <h3 class="feature-title">95% On-Time Delivery</h3>
+                <p class="feature-desc">95 out of 100 projects delivered on or ahead of schedule — tracked across all completed projects since our founding.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon-wrap">🔄</div>
+                <h3 class="feature-title">3+ Year Avg. Relationship</h3>
+                <p class="feature-desc">Our clients don't leave. The average client relationship lasts over 3 years — the best proof that our work consistently delivers value.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="section bg-dark">
+    <div class="container">
+        <div class="cta-banner animate-on-scroll">
+            <span class="section-label" style="justify-content:center;">Join Them</span>
+            <h2 class="cta-title">Ready to Write Your Own Success Story?</h2>
+            <p class="cta-sub">Book a free 30-minute strategy call. No commitments — just clarity on how we can grow your business online.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-gold btn-lg">🚀 Get Free Consultation</a>
+                <a href="portfolio.html" class="btn btn-outline btn-lg">View Our Work →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-about">
+                <a href="index.html" class="logo" style="display:inline-flex;margin-bottom:0;"><div class="logo-icon">BS</div><div class="logo-text"><span class="logo-name">BS Tech Solutions</span><span class="logo-tagline">Digital Growth Agency</span></div></a>
+                <p>Building powerful digital experiences for businesses across India.</p>
+                <div class="footer-socials"><a class="social-link" href="#" aria-label="LinkedIn">in</a><a class="social-link" href="#" aria-label="Instagram">📷</a><a class="social-link" href="#" aria-label="Twitter">𝕏</a><a class="social-link" href="#" aria-label="WhatsApp">💬</a></div>
+            </div>
+            <div class="footer-col"><h4>Services</h4><div class="footer-links"><a href="services.html" class="footer-link">Website Development</a><a href="services.html" class="footer-link">Full Stack Apps</a><a href="services.html" class="footer-link">WhatsApp Automation</a><a href="services.html" class="footer-link">SEO Services</a><a href="services.html" class="footer-link">Paid Ads</a></div></div>
+            <div class="footer-col"><h4>Company</h4><div class="footer-links"><a href="about.html" class="footer-link">About Us</a><a href="portfolio.html" class="footer-link">Portfolio</a><a href="pricing.html" class="footer-link">Pricing</a><a href="testimonials.html" class="footer-link">Testimonials</a><a href="contact.html" class="footer-link">Contact Us</a></div></div>
+            <div class="footer-col"><h4>Contact</h4><div class="footer-contact-item"><div class="footer-contact-icon">📧</div><span>bhanuthammai26012@gmail.com</span></div><div class="footer-contact-item"><div class="footer-contact-icon">📞</div><span>+91 XXXX XXX XXX</span></div><div class="footer-contact-item"><div class="footer-contact-icon">🇮🇳</div><span>All Over India</span></div></div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 BS Tech Solutions. All rights reserved. Built with ❤️ in India.</p>
+            <div class="footer-bottom-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
+        </div>
+    </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/91XXXXXXXXXX?text=Hi%20BS%20Tech%20Solutions%2C%20I%27d%20like%20a%20free%20consultation." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <div class="wa-pulse"></div>
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<a class="mobile-call-btn" href="tel:+91XXXXXXXXXX" style="bottom:100px;">📞 Call Now</a>
+
+<script>
+window.addEventListener('scroll',()=>{const p=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight))*100;document.getElementById('scrollProgress').style.width=p+'%';});
+document.getElementById('hamburger').addEventListener('click',function(){const m=document.getElementById('mobileMenu');m.classList.toggle('open');const s=this.querySelectorAll('span'),o=m.classList.contains('open');s[0].style.transform=o?'translateY(7px) rotate(45deg)':'';s[1].style.opacity=o?'0':'';s[2].style.transform=o?'translateY(-7px) rotate(-45deg)':'';});
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in-view');});},{threshold:.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.animate-on-scroll').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
