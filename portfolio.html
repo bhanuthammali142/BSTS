@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | BS Tech Solutions — Web Projects India</title>
+    <meta name="description"
+        content="Explore BS Tech Solutions's portfolio of web development and digital marketing projects including restaurant websites, catering portals, and full-stack business applications.">
+    <meta name="keywords"
+        content="web development portfolio india, website projects, restaurant website india, catering website, full stack portfolio">
+    <link rel="canonical" href="https://bstechsolutions.in/portfolio.html">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .filter-tabs {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 24px;
+            border-radius: var(--radius-full);
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            border: 1px solid var(--border-subtle);
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--gray-400);
+            transition: var(--transition);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--gradient-blue);
+            border-color: var(--blue-500);
+            color: var(--white);
+            box-shadow: var(--shadow-blue);
+        }
+
+        .project-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 12px;
+            background: rgba(37, 99, 235, 0.1);
+            border: 1px solid var(--border-blue);
+            border-radius: var(--radius-full);
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--blue-400);
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        .portfolio-card-full {
+            background: var(--gradient-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            transition: var(--transition);
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+        }
+
+        .portfolio-card-full:hover {
+            border-color: var(--border-blue);
+            box-shadow: var(--shadow-blue);
+        }
+
+        .portfolio-card-full.reverse {
+            direction: rtl;
+        }
+
+        .portfolio-card-full.reverse>* {
+            direction: ltr;
+        }
+
+        .portfolio-visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 360px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .portfolio-details {
+            padding: 48px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .portfolio-feature-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin: 20px 0;
+        }
+
+        .portfolio-feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: var(--gray-300);
+        }
+
+        .portfolio-feature-item::before {
+            content: '▸';
+            color: var(--gold-400);
+            font-size: 11px;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-card-full {
+                grid-template-columns: 1fr;
+                direction: ltr !important;
+            }
+
+            .portfolio-card-full>* {
+                direction: ltr !important;
+            }
+
+            .portfolio-visual {
+                min-height: 220px;
+            }
+
+            .portfolio-details {
+                padding: 32px 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-scrolled" id="navbar">
+        <div class="navbar-inner">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">BS</div>
+                <div class="logo-text">
+                    <span class="logo-name">BS Tech Solutions</span>
+                    <span class="logo-tagline">Digital Growth Agency</span>
+                </div>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="portfolio.html" class="nav-link active">Portfolio</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-cta">
+                <a href="contact.html" class="btn btn-gold btn-sm">Get Free Consultation</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="contact.html" class="btn btn-gold" style="margin-top:12px;">Get Free Consultation</a>
+    </div>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="page-hero-grid"></div>
+        <div class="hero-glow"
+            style="width:500px;height:400px;background:radial-gradient(circle,rgba(37,99,235,0.15) 0%,transparent 70%);top:-50px;right:10%;filter:blur(100px);position:absolute;pointer-events:none;">
+        </div>
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a><span>›</span>
+                    <span style="color:var(--gray-300)">Portfolio</span>
+                </div>
+                <span class="section-label">Our Work</span>
+                <h1 class="section-title" style="font-size:clamp(36px,5vw,60px);">
+                    Projects That Drive <span class="text-gradient-gold">Real</span><br>
+                    Business <span class="text-gradient-blue">Results</span>
+                </h1>
+                <p class="section-subtitle">Every project in our portfolio represents a real business problem solved —
+                    with measurable outcomes, clean code, and stunning design.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── FILTER TABS ───────────────────────── -->
+    <section class="section bg-dark" id="projects">
+        <div class="container">
+            <div class="filter-tabs">
+                <button class="filter-btn active" onclick="filterPortfolio('all', this)">All Projects</button>
+                <button class="filter-btn" onclick="filterPortfolio('web', this)">Web Development</button>
+                <button class="filter-btn" onclick="filterPortfolio('fullstack', this)">Full Stack</button>
+                <button class="filter-btn" onclick="filterPortfolio('marketing', this)">Marketing</button>
+            </div>
+
+            <!-- ─── PROJECT 1: Restaurant ─── -->
+            <div class="portfolio-card-full animate-on-scroll" style="margin-bottom:32px;" data-category="web">
+                <div class="portfolio-visual"
+                    style="background: linear-gradient(135deg, #1a0800 0%, #3d1a00 40%, #1a0a00 70%, #0a1500 100%);">
+                    <div style="text-align:center; position:relative; z-index:2;">
+                        <div
+                            style="font-size:80px; margin-bottom:16px; filter:drop-shadow(0 0 30px rgba(251,191,36,0.4));">
+                            🍽️</div>
+                        <div
+                            style="font-size:13px; font-weight:700; color:var(--gold-400); letter-spacing:2px; text-transform:uppercase;">
+                            Restaurant Website</div>
+                        <div style="font-size:11px; color:var(--gray-500); margin-top:4px;">Live & Active Project</div>
+                    </div>
+                    <div
+                        style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(251,191,36,0.08) 0%,transparent 70%);pointer-events:none;">
+                    </div>
+                    <!-- Mock browser chrome -->
+                    <div
+                        style="position:absolute;top:20px;left:20px;right:20px;background:rgba(0,0,0,0.5);border-radius:8px;padding:10px 14px;backdrop-filter:blur(10px);">
+                        <div style="display:flex;align-items:center;gap:8px;">
+                            <div style="width:8px;height:8px;border-radius:50%;background:#ff5f56;"></div>
+                            <div style="width:8px;height:8px;border-radius:50%;background:#ffbd2e;"></div>
+                            <div style="width:8px;height:8px;border-radius:50%;background:#27c93f;"></div>
+                            <div
+                                style="flex:1;background:rgba(255,255,255,0.06);border-radius:4px;padding:4px 8px;font-size:10px;color:var(--gray-500);">
+                                aishwaryaruchulu.in</div>
+                        </div>
+                    </div>
+                    <div
+                        style="position:absolute;bottom:20px;right:20px;background:rgba(251,191,36,0.15);border:1px solid var(--border-gold);border-radius:var(--radius-md);padding:10px 16px;backdrop-filter:blur(10px);">
+                        <div style="font-size:12px;color:var(--gold-400);font-weight:700;">+40% Reservations</div>
+                    </div>
+                </div>
+
+                <div class="portfolio-details">
+                    <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+                        <span class="portfolio-type" style="margin-bottom:0;">🌐 Web Development</span>
+                        <span class="badge-new">Delivered</span>
+                    </div>
+                    <h2 style="font-size:26px;font-weight:800;color:var(--white);margin-bottom:12px;">Aishwarya Ruchulu
+                        Restaurant</h2>
+                    <p style="font-size:15px;color:var(--gray-400);line-height:1.8;margin-bottom:24px;">
+                        A premium, mobile-first restaurant website designed to increase walk-ins, online reservations,
+                        and brand recognition. Features an interactive menu, gallery, and integrated Google Maps.
+                    </p>
+                    <div class="portfolio-feature-list">
+                        <div class="portfolio-feature-item">Mobile-first responsive design with fast load times</div>
+                        <div class="portfolio-feature-item">Interactive digital menu with categories & photos</div>
+                        <div class="portfolio-feature-item">Online table reservation system via WhatsApp</div>
+                        <div class="portfolio-feature-item">Google Maps integration & local SEO optimization</div>
+                        <div class="portfolio-feature-item">Photo gallery with lazy loading</div>
+                        <div class="portfolio-feature-item">Sticky call & WhatsApp floating buttons</div>
+                    </div>
+                    <div style="margin-bottom:20px;">
+                        <span class="project-tag">HTML5</span>
+                        <span class="project-tag">CSS3</span>
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">Google Maps API</span>
+                        <span class="project-tag">Local SEO</span>
+                    </div>
+                    <div
+                        style="padding:14px;background:rgba(34,197,94,0.06);border:1px solid rgba(34,197,94,0.2);border-radius:var(--radius-md);margin-bottom:20px;">
+                        <span style="font-size:13px;color:#22C55E;font-weight:600;">📊 Result: 40% increase in
+                            reservations within 60 days of launch</span>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary btn-sm">Build Similar Project →</a>
+                </div>
+            </div>
+
+            <!-- ─── PROJECT 2: Catering ─── -->
+            <div class="portfolio-card-full reverse animate-on-scroll" style="margin-bottom:32px;" data-category="web">
+                <div class="portfolio-visual"
+                    style="background: linear-gradient(135deg, #000a1a 0%, #001a3d 40%, #0a000a 70%, #1a0010 100%);">
+                    <div style="text-align:center; position:relative; z-index:2;">
+                        <div
+                            style="font-size:80px; margin-bottom:16px; filter:drop-shadow(0 0 30px rgba(37,99,235,0.4));">
+                            🎊</div>
+                        <div
+                            style="font-size:13px; font-weight:700; color:var(--blue-400); letter-spacing:2px; text-transform:uppercase;">
+                            Catering Website</div>
+                        <div style="font-size:11px; color:var(--gray-500); margin-top:4px;">Live & Active Project</div>
+                    </div>
+                    <div
+                        style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(37,99,235,0.08) 0%,transparent 70%);pointer-events:none;">
+                    </div>
+                    <div
+                        style="position:absolute;top:20px;left:20px;right:20px;background:rgba(0,0,0,0.5);border-radius:8px;padding:10px 14px;backdrop-filter:blur(10px);">
+                        <div style="display:flex;align-items:center;gap:8px;">
+                            <div style="width:8px;height:8px;border-radius:50%;background:#ff5f56;"></div>
+                            <div style="width:8px;height:8px;border-radius:50%;background:#ffbd2e;"></div>
+                            <div style="width:8px;height:8px;border-radius:50%;background:#27c93f;"></div>
+                            <div
+                                style="flex:1;background:rgba(255,255,255,0.06);border-radius:4px;padding:4px 8px;font-size:10px;color:var(--gray-500);">
+                                svcaterers.in</div>
+                        </div>
+                    </div>
+                    <div
+                        style="position:absolute;bottom:20px;right:20px;background:rgba(37,99,235,0.15);border:1px solid var(--border-blue);border-radius:var(--radius-md);padding:10px 16px;backdrop-filter:blur(10px);">
+                        <div style="font-size:12px;color:var(--blue-400);font-weight:700;">3x More Inquiries</div>
+                    </div>
+                </div>
+
+                <div class="portfolio-details">
+                    <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+                        <span class="portfolio-type" style="margin-bottom:0;">🌐 Web Development</span>
+                        <span class="badge-new">Delivered</span>
+                    </div>
+                    <h2 style="font-size:26px;font-weight:800;color:var(--white);margin-bottom:12px;">SV Caterers</h2>
+                    <p style="font-size:15px;color:var(--gray-400);line-height:1.8;margin-bottom:24px;">
+                        An elegant, conversion-focused website for a premium catering company. Showcases service
+                        packages, event gallery, and captures inquiries through multiple channels including WhatsApp
+                        automation.
+                    </p>
+                    <div class="portfolio-feature-list">
+                        <div class="portfolio-feature-item">Premium dark-theme design with warm gold accents</div>
+                        <div class="portfolio-feature-item">Service packages page with pricing overview</div>
+                        <div class="portfolio-feature-item">Event gallery with lightbox and categories</div>
+                        <div class="portfolio-feature-item">WhatsApp inquiry integration with pre-filled messages</div>
+                        <div class="portfolio-feature-item">Contact form with CRM-style email notifications</div>
+                        <div class="portfolio-feature-item">Local SEO for catering in target city</div>
+                    </div>
+                    <div style="margin-bottom:20px;">
+                        <span class="project-tag">HTML5</span>
+                        <span class="project-tag">CSS3 / GSAP</span>
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">WhatsApp API</span>
+                        <span class="project-tag">SEO</span>
+                    </div>
+                    <div
+                        style="padding:14px;background:rgba(34,197,94,0.06);border:1px solid rgba(34,197,94,0.2);border-radius:var(--radius-md);margin-bottom:20px;">
+                        <span style="font-size:13px;color:#22C55E;font-weight:600;">📊 Result: 3x increase in online
+                            inquiries within 30 days</span>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary btn-sm">Build Similar Project →</a>
+                </div>
+            </div>
+
+            <!-- ─── PROJECT 3: Business Portal ─── -->
+            <div class="portfolio-card-full animate-on-scroll" style="margin-bottom:32px;" data-category="fullstack">
+                <div class="portfolio-visual"
+                    style="background: linear-gradient(135deg, #050B18 0%, #0D1A2F 50%, #091221 100%);">
+                    <div style="text-align:center; position:relative; z-index:2;">
+                        <div
+                            style="font-size:80px; margin-bottom:16px; filter:drop-shadow(0 0 30px rgba(251,191,36,0.3));">
+                            💼</div>
+                        <div
+                            style="font-size:13px; font-weight:700; color:var(--gold-400); letter-spacing:2px; text-transform:uppercase;">
+                            Business Portal</div>
+                        <div style="font-size:11px; color:var(--gray-500); margin-top:4px;">Full Stack Application</div>
+                    </div>
+                    <div
+                        style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(251,191,36,0.06) 0%,transparent 70%);pointer-events:none;">
+                    </div>
+                    <div
+                        style="position:absolute;top:20px;left:20px;right:20px;background:rgba(0,0,0,0.5);border-radius:8px;padding:10px 14px;backdrop-filter:blur(10px);">
+                        <div style="display:flex;align-items:center;gap:8px;">
+                            <div style="width:8px;height:8px;border-radius:50%;background:#ff5f56;"></div>
+                            <div style="width:8px;height:8px;border-radius:50%;background:#ffbd2e;"></div>
+                            <div style="width:8px;height:8px;border-radius:50%;background:#27c93f;"></div>
+                            <div
+                                style="flex:1;background:rgba(255,255,255,0.06);border-radius:4px;padding:4px 8px;font-size:10px;color:var(--gray-500);">
+                                corporate-portal.in</div>
+                        </div>
+                    </div>
+                    <div
+                        style="position:absolute;bottom:20px;right:20px;background:rgba(251,191,36,0.15);border:1px solid var(--border-gold);border-radius:var(--radius-md);padding:10px 16px;backdrop-filter:blur(10px);">
+                        <div style="font-size:12px;color:var(--gold-400);font-weight:700;">Full Stack</div>
+                    </div>
+                </div>
+
+                <div class="portfolio-details">
+                    <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+                        <span class="portfolio-type" style="margin-bottom:0;">⚙️ Full Stack Application</span>
+                        <span class="badge-popular">Case Study</span>
+                    </div>
+                    <h2 style="font-size:26px;font-weight:800;color:var(--white);margin-bottom:12px;">Corporate Business
+                        Portal</h2>
+                    <p style="font-size:15px;color:var(--gray-400);line-height:1.8;margin-bottom:24px;">
+                        A comprehensive full-stack business portal with client management, service showcase, team
+                        directory, and a content management system for a mid-sized Indian enterprise.
+                    </p>
+                    <div class="portfolio-feature-list">
+                        <div class="portfolio-feature-item">React.js frontend with Next.js for SEO and performance</div>
+                        <div class="portfolio-feature-item">Node.js + Express REST API backend</div>
+                        <div class="portfolio-feature-item">MongoDB database with optimized schema design</div>
+                        <div class="portfolio-feature-item">Custom admin CMS for team & service management</div>
+                        <div class="portfolio-feature-item">Lead capture system with email/WhatsApp notifications</div>
+                        <div class="portfolio-feature-item">JWT authentication and role-based access control</div>
+                    </div>
+                    <div style="margin-bottom:20px;">
+                        <span class="project-tag">React.js</span>
+                        <span class="project-tag">Next.js</span>
+                        <span class="project-tag">Node.js</span>
+                        <span class="project-tag">MongoDB</span>
+                        <span class="project-tag">JWT Auth</span>
+                        <span class="project-tag">REST API</span>
+                    </div>
+                    <a href="contact.html" class="btn btn-gold btn-sm">Discuss Similar Project →</a>
+                </div>
+            </div>
+
+            <!-- ─── PROJECT 4: SEO / Marketing ─── -->
+            <div class="portfolio-card-full reverse animate-on-scroll" style="margin-bottom:32px;"
+                data-category="marketing">
+                <div class="portfolio-visual"
+                    style="background: linear-gradient(135deg, #050810 0%, #0D1A2F 50%, #1a0820 100%);">
+                    <div style="text-align:center; position:relative; z-index:2;">
+                        <div
+                            style="font-size:80px; margin-bottom:16px; filter:drop-shadow(0 0 30px rgba(37,99,235,0.4));">
+                            📈</div>
+                        <div
+                            style="font-size:13px; font-weight:700; color:var(--blue-400); letter-spacing:2px; text-transform:uppercase;">
+                            SEO & Marketing</div>
+                        <div style="font-size:11px; color:var(--gray-500); margin-top:4px;">Digital Marketing Campaign
+                        </div>
+                    </div>
+                    <div
+                        style="position:absolute;bottom:20px;left:20px;right:20px;display:flex;flex-direction:column;gap:8px;">
+                        <div
+                            style="background:rgba(0,0,0,0.5);border-radius:var(--radius-md);padding:10px 14px;backdrop-filter:blur(10px);">
+                            <div
+                                style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+                                <span style="font-size:11px;color:var(--gray-400);">Organic Traffic</span>
+                                <span style="font-size:11px;font-weight:700;color:#22C55E;">+312%</span>
+                            </div>
+                            <div
+                                style="height:4px;background:rgba(255,255,255,0.05);border-radius:2px;overflow:hidden;">
+                                <div style="width:80%;height:100%;background:var(--gradient-blue);border-radius:2px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            style="background:rgba(0,0,0,0.5);border-radius:var(--radius-md);padding:10px 14px;backdrop-filter:blur(10px);">
+                            <div
+                                style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+                                <span style="font-size:11px;color:var(--gray-400);">Keyword Rankings</span>
+                                <span style="font-size:11px;font-weight:700;color:var(--gold-400);">Page 1</span>
+                            </div>
+                            <div
+                                style="height:4px;background:rgba(255,255,255,0.05);border-radius:2px;overflow:hidden;">
+                                <div style="width:95%;height:100%;background:var(--gradient-gold);border-radius:2px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-details">
+                    <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+                        <span class="portfolio-type" style="margin-bottom:0;">🔍 SEO & Marketing</span>
+                        <span class="badge-new">Case Study</span>
+                    </div>
+                    <h2 style="font-size:26px;font-weight:800;color:var(--white);margin-bottom:12px;">TechBiz Solutions
+                        — Full SEO Turnaround</h2>
+                    <p style="font-size:15px;color:var(--gray-400);line-height:1.8;margin-bottom:24px;">
+                        A comprehensive 6-month SEO campaign that took a B2B services company from page 5 to position 1
+                        on Google for multiple high-value keywords, delivering 312% organic traffic growth.
+                    </p>
+                    <div class="portfolio-feature-list">
+                        <div class="portfolio-feature-item">Complete technical SEO audit and 47 fixes implemented</div>
+                        <div class="portfolio-feature-item">Keyword research identifying 120 target keywords</div>
+                        <div class="portfolio-feature-item">Content strategy: 24 authority articles published</div>
+                        <div class="portfolio-feature-item">Local SEO for 3 city-specific landing pages</div>
+                        <div class="portfolio-feature-item">Link building acquiring 45 high-DA backlinks</div>
+                        <div class="portfolio-feature-item">Core Web Vitals score improved from 42 to 96</div>
+                    </div>
+                    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:20px;">
+                        <div
+                            style="padding:12px;background:rgba(34,197,94,0.06);border:1px solid rgba(34,197,94,0.2);border-radius:var(--radius-md);text-align:center;">
+                            <div style="font-size:18px;font-weight:800;color:var(--white);">+312%</div>
+                            <div style="font-size:10px;color:var(--gray-400);">Traffic</div>
+                        </div>
+                        <div
+                            style="padding:12px;background:rgba(37,99,235,0.06);border:1px solid var(--border-blue);border-radius:var(--radius-md);text-align:center;">
+                            <div style="font-size:18px;font-weight:800;color:var(--white);">#1</div>
+                            <div style="font-size:10px;color:var(--gray-400);">Rankings</div>
+                        </div>
+                        <div
+                            style="padding:12px;background:rgba(251,191,36,0.06);border:1px solid var(--border-gold);border-radius:var(--radius-md);text-align:center;">
+                            <div style="font-size:18px;font-weight:800;color:var(--white);">6mo</div>
+                            <div style="font-size:10px;color:var(--gray-400);">Timeline</div>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary btn-sm">Boost My Rankings →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── CTA ──────────────────────────────── -->
+    <section class="section bg-dark-2">
+        <div class="container">
+            <div class="cta-banner animate-on-scroll">
+                <span class="section-label" style="justify-content:center;">Start Your Project</span>
+                <h2 class="cta-title">Ready to Be Our Next Success Story?</h2>
+                <p class="cta-sub">Every project starts with a conversation. Tell us what you're building and let's make
+                    it exceptional.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-gold btn-lg">🚀 Start Your Project</a>
+                    <a href="services.html" class="btn btn-outline btn-lg">View All Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="logo" style="display:inline-flex;margin-bottom:0;">
+                        <div class="logo-icon">BS</div>
+                        <div class="logo-text">
+                            <span class="logo-name">BS Tech Solutions</span>
+                            <span class="logo-tagline">Digital Growth Agency</span>
+                        </div>
+                    </a>
+                    <p>Premium web development and digital marketing for businesses all over India.</p>
+                    <div class="footer-socials">
+                        <a class="social-link" href="#" aria-label="LinkedIn">in</a>
+                        <a class="social-link" href="#" aria-label="Instagram">📷</a>
+                        <a class="social-link" href="#" aria-label="Twitter">𝕏</a>
+                        <a class="social-link" href="#" aria-label="WhatsApp">💬</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <div class="footer-links">
+                        <a href="services.html" class="footer-link">Website Development</a>
+                        <a href="services.html" class="footer-link">Full Stack Apps</a>
+                        <a href="services.html" class="footer-link">WhatsApp Automation</a>
+                        <a href="services.html" class="footer-link">SEO Services</a>
+                        <a href="services.html" class="footer-link">Paid Ads</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <div class="footer-links">
+                        <a href="about.html" class="footer-link">About Us</a>
+                        <a href="portfolio.html" class="footer-link">Portfolio</a>
+                        <a href="contact.html" class="footer-link">Contact Us</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">📧</div><span>info@bstechsolutions.in</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">📞</div><span>+91 XXXX XXX XXX</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">🇮🇳</div><span>All Over India</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 BS Tech Solutions. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a class="whatsapp-float"
+        href="https://wa.me/91XXXXXXXXXX?text=Hi%20BS%20Tech%20Solutions%2C%20I%20want%20to%20discuss%20my%20project"
+        target="_blank" aria-label="Chat on WhatsApp">
+        <div class="wa-pulse"></div>
+        <svg viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+    <a class="mobile-call-btn" href="tel:+91XXXXXXXXXX">📞 Call Now</a>
+
+    <script>
+        const scrollProgress = document.getElementById('scrollProgress');
+        window.addEventListener('scroll', () => {
+            const p = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            scrollProgress.style.width = p + '%';
+        });
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+            const spans = hamburger.querySelectorAll('span');
+            const open = mobileMenu.classList.contains('open');
+            spans[0].style.transform = open ? 'translateY(7px) rotate(45deg)' : '';
+            spans[1].style.opacity = open ? '0' : '';
+            spans[2].style.transform = open ? 'translateY(-7px) rotate(-45deg)' : '';
+        });
+
+        function filterPortfolio(cat, btn) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            document.querySelectorAll('[data-category]').forEach(card => {
+                if (cat === 'all' || card.dataset.category === cat) {
+                    card.style.display = 'grid';
+                    setTimeout(() => card.style.opacity = '1', 10);
+                } else {
+                    card.style.opacity = '0';
+                    setTimeout(() => card.style.display = 'none', 300);
+                }
+            });
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in-view'); });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>
