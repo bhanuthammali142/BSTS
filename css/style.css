@@ -810,9 +810,19 @@ h1, h2, h3, h4, h5, h6 {
   pointer-events: none;
 }
 
-.cta-title { font-size: clamp(28px, 4vw, 48px); font-weight: 900; color: var(--white); margin-bottom: 16px; }
-.cta-sub { font-size: 18px; color: var(--gray-400); margin-bottom: 40px; }
+.cta-title { font-size: clamp(28px, 4vw, 48px); font-weight: 900; color: #FFFFFF !important; margin-bottom: 16px; }
+.cta-sub { font-size: 18px; color: #94A3B8; margin-bottom: 40px; }
 .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+/* Special button fixes for dark CTA section */
+.cta-banner .btn-outline {
+  color: #FFFFFF !important;
+  border-color: rgba(255,255,255,0.3);
+}
+.cta-banner .btn-outline:hover {
+  border-color: var(--gold-400);
+  background: rgba(255,255,255,0.05);
+}
 
 /* ─── FOOTER ─────────────────────────────────────────────── */
 .footer {
