@@ -31,12 +31,12 @@
   --white: #0F172A;      /* Text becomes Dark */
   --bg-white: #FFFFFF;   /* True white for logic */
   
-  --gray-100: #0F172A;   /* Primary Text */
-  --gray-200: #334155;   /* Secondary Text */
-  --gray-300: #475569;   /* Muted Text */
-  --gray-400: #64748B;   /* Faded Text */
-  --gray-500: #94A3B8;   /* Placeholder */
-  --gray-600: #CBD5E1;   /* Disabled */
+  --gray-100: #0F172A;   /* Primary Text - Slate 900 */
+  --gray-200: #1E293B;   /* Secondary Text - Slate 800 */
+  --gray-300: #334155;   /* Muted Text - Slate 700 */
+  --gray-400: #475569;   /* Faded Text - Slate 600 */
+  --gray-500: #64748B;   /* Placeholder - Slate 500 */
+  --gray-600: #94A3B8;   /* Disabled - Slate 400 */
 
   --gradient-hero: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 50%, #E2E8F0 100%);
   --gradient-blue: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
@@ -920,7 +920,7 @@ h1, h2, h3, h4, h5, h6 {
 .form-group { margin-bottom: 20px; }
 
 .form-group label {
-  display: block; font-size: 12px; font-weight: 700; color: var(--gray-300);
+  display: block; font-size: 12px; font-weight: 700; color: var(--gray-200);
   margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;
 }
 
@@ -935,7 +935,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .form-group input::placeholder,
-.form-group textarea::placeholder { color: var(--gray-500); }
+.form-group textarea::placeholder { color: var(--gray-400); }
 
 .form-group input:focus,
 .form-group select:focus,
